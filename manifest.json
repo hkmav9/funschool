@@ -1,0 +1,18 @@
+{
+    "name": "FunSchool - Learn & Play",
+    "short_name": "FunSchool",
+    "description": "Fun educational app for young learners",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#FAFBFF",
+    "theme_color": "#FF6B6B",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+}

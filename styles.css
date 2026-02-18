@@ -1,0 +1,1152 @@
+/* FunSchool - styles.css */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #FAFBFF;
+    --bg-card: #FFFFFF;
+    --bg-secondary: #F0F4FF;
+    --text: #2D3436;
+    --text-secondary: #636E72;
+    --text-light: #B2BEC3;
+    --accent-red: #FF6B6B;
+    --accent-blue: #4ECDC4;
+    --accent-yellow: #FFD93D;
+    --accent-purple: #A29BFE;
+    --accent-green: #55EFC4;
+    --accent-orange: #FDCB6E;
+    --accent-pink: #FD79A8;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+    --tap-min: 60px;
+    --safe-top: env(safe-area-inset-top, 0px);
+    --safe-bottom: env(safe-area-inset-bottom, 0px);
+    --safe-left: env(safe-area-inset-left, 0px);
+    --safe-right: env(safe-area-inset-right, 0px);
+    --font: -apple-system, BlinkMacSystemFont, 'SF Pro Rounded', 'SF Pro Display', system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #1A1B2E;
+        --bg-card: #252742;
+        --bg-secondary: #2D2F4E;
+        --text: #E8E8F0;
+        --text-secondary: #9D9DB5;
+        --text-light: #6B6B85;
+        --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+        --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+        --shadow-lg: 0 8px 32px rgba(0,0,0,0.35);
+    }
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100dvh;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* ---- Screens ---- */
+.screen {
+    display: none;
+    flex-direction: column;
+    min-height: 100dvh;
+    padding: calc(20px + var(--safe-top)) calc(20px + var(--safe-right)) calc(20px + var(--safe-bottom)) calc(20px + var(--safe-left));
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* Screen transitions */
+.screen.enter-right {
+    animation: screenEnterRight 0.3s ease both;
+}
+
+.screen.enter-left {
+    animation: screenEnterLeft 0.3s ease both;
+}
+
+.screen.exit-left {
+    animation: screenExitLeft 0.25s ease both;
+    pointer-events: none;
+}
+
+.screen.exit-right {
+    animation: screenExitRight 0.25s ease both;
+    pointer-events: none;
+}
+
+@keyframes screenEnterRight {
+    from { transform: translateX(40px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes screenEnterLeft {
+    from { transform: translateX(-40px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes screenExitLeft {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes screenExitRight {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* ---- Header ---- */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    flex-shrink: 0;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.header-btn {
+    width: var(--tap-min);
+    height: var(--tap-min);
+    border: none;
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.header-btn:active {
+    transform: scale(0.93);
+    box-shadow: none;
+}
+
+.star-counter {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent-yellow);
+}
+
+.star-counter .star-icon {
+    font-size: 1.5rem;
+}
+
+.star-counter.pulse .star-icon {
+    animation: starPulse 0.4s ease;
+}
+
+/* ---- Home Screen ---- */
+.greeting {
+    text-align: center;
+    padding: 20px 0 30px;
+}
+
+/* Avatar / Welcome Picture */
+.avatar-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 8px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.avatar-wrapper:active .avatar {
+    transform: scale(0.92);
+}
+
+.avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-yellow), var(--accent-orange));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.15s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.avatar-default {
+    font-size: 3.5rem;
+    line-height: 1;
+    animation: avatarBob 3s ease-in-out infinite;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    border-radius: 50%;
+}
+
+.avatar-img.visible {
+    display: block;
+}
+
+.avatar-img.visible + .avatar-default,
+.avatar-default.hidden {
+    display: none;
+}
+
+.avatar-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    background: var(--bg-card);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    box-shadow: var(--shadow-sm);
+    border: 3px solid var(--bg);
+    z-index: 2;
+}
+
+.avatar-ring {
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    border: 3px dashed var(--accent-yellow);
+    opacity: 0.5;
+    animation: avatarRingSpin 12s linear infinite;
+}
+
+@keyframes avatarBob {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-4px) rotate(-3deg); }
+    75% { transform: translateY(-2px) rotate(3deg); }
+}
+
+@keyframes avatarRingSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* When photo is set, update badge and ring */
+.avatar-wrapper.has-photo .avatar {
+    background: var(--bg-secondary);
+}
+
+.avatar-wrapper.has-photo .avatar-ring {
+    border-color: var(--accent-green);
+    border-style: solid;
+    animation: none;
+    opacity: 0.6;
+}
+
+.avatar-wrapper.has-photo .avatar-badge {
+    font-size: 0.8rem;
+}
+
+/* Photo set animation */
+@keyframes avatarPhotoSet {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.avatar-img.just-set {
+    animation: avatarPhotoSet 0.5s ease both;
+}
+
+.greeting-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 8px;
+    color: var(--text);
+}
+
+.greeting-sub {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+.category-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    margin: 20px 0 12px;
+}
+
+.module-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.module-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 24px 16px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    border: 3px solid transparent;
+}
+
+.module-card:active {
+    transform: scale(0.95);
+    box-shadow: var(--shadow-sm);
+}
+
+.module-card-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.module-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.module-card-stars {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.module-card-stars .star-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+}
+
+.module-card-stars .star-dot.filled {
+    background: var(--accent-yellow);
+}
+
+/* ---- Module Screen ---- */
+.module-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 16px;
+    flex-shrink: 0;
+}
+
+.back-btn {
+    width: var(--tap-min);
+    height: var(--tap-min);
+    border: none;
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.15s ease;
+    flex-shrink: 0;
+}
+
+.back-btn:active {
+    transform: scale(0.93);
+}
+
+.module-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    flex: 1;
+}
+
+.module-stars {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-yellow);
+}
+
+.module-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* ---- Math Module ---- */
+.math-question {
+    text-align: center;
+    padding: 16px 0;
+}
+
+.math-question-text {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+.math-level-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+.math-level-badge.level-up {
+    background: var(--accent-yellow);
+    color: #333;
+    animation: correctBounce 0.5s ease;
+}
+
+.math-progress {
+    margin-top: 12px;
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.math-progress-bar {
+    height: 10px;
+    background: var(--bg-secondary);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.math-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-orange), var(--accent-yellow));
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.math-progress-label {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.visual-objects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    min-height: 100px;
+}
+
+.visual-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    max-width: 45%;
+}
+
+.visual-object {
+    font-size: 2rem;
+    animation: popIn 0.3s ease both;
+}
+
+.visual-plus {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.answer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 16px 0;
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.answer-btn {
+    height: 80px;
+    border: 3px solid var(--bg-secondary);
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text);
+    cursor: pointer;
+    transition: transform 0.1s ease, border-color 0.15s ease, background 0.15s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.answer-btn:active {
+    transform: scale(0.95);
+}
+
+.answer-btn.correct {
+    border-color: var(--accent-green);
+    background: #E8FFF5;
+    animation: correctBounce 0.5s ease;
+}
+
+.answer-btn.wrong {
+    animation: gentleShake 0.4s ease;
+}
+
+/* Text-based answer buttons (planet names etc) */
+.answer-btn.text-answer {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+@media (prefers-color-scheme: dark) {
+    .answer-btn.correct {
+        background: rgba(85, 239, 196, 0.15);
+    }
+}
+
+/* ---- Mascot ---- */
+.mascot {
+    text-align: center;
+    font-size: 3rem;
+    padding: 12px 0;
+    transition: opacity 0.3s ease;
+    flex-shrink: 0;
+}
+
+.mascot.celebrate {
+    animation: mascotBounce 0.5s ease;
+}
+
+.mascot.encourage {
+    animation: mascotWiggle 0.5s ease;
+}
+
+.mascot.levelup {
+    animation: mascotBounce 0.8s ease 2;
+}
+
+.mascot-message {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    min-height: 1.5em;
+}
+
+/* ---- Science Module ---- */
+.mode-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 8px 0 16px;
+}
+
+.mode-tab {
+    flex: 1;
+    height: 50px;
+    border: 2px solid var(--bg-secondary);
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mode-tab.active {
+    border-color: var(--accent-blue);
+    background: var(--accent-blue);
+    color: #fff;
+}
+
+.mode-tab:active {
+    transform: scale(0.95);
+}
+
+/* Solar system explore */
+.solar-system {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    max-width: 400px;
+    max-height: 400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sun {
+    font-size: 2.5rem;
+    position: absolute;
+    z-index: 2;
+}
+
+.orbit-ring {
+    position: absolute;
+    border: 1px dashed var(--text-light);
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.planet-btn {
+    position: absolute;
+    width: var(--tap-min);
+    height: var(--tap-min);
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    z-index: 3;
+}
+
+.planet-btn:active {
+    transform: scale(1.3);
+}
+
+.planet-btn .planet-label {
+    position: absolute;
+    bottom: -16px;
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.planet-btn.explored::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 10px;
+    height: 10px;
+    background: var(--accent-green);
+    border-radius: 50%;
+    border: 2px solid var(--bg);
+}
+
+/* Planet detail bottom sheet */
+.bottom-sheet-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 100;
+    animation: fadeIn 0.2s ease;
+}
+
+.bottom-sheet-overlay.active {
+    display: block;
+}
+
+.bottom-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    padding: 24px;
+    padding-bottom: calc(24px + var(--safe-bottom));
+    z-index: 101;
+    transform: translateY(100%);
+    transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.bottom-sheet.open {
+    transform: translateY(0);
+}
+
+.sheet-handle {
+    width: 40px;
+    height: 4px;
+    background: var(--text-light);
+    border-radius: 2px;
+    margin: 0 auto 20px;
+}
+
+.sheet-planet-icon {
+    font-size: 4rem;
+    text-align: center;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.sheet-planet-name {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.fact-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--bg-secondary);
+}
+
+.fact-row:last-child {
+    border-bottom: none;
+}
+
+.fact-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.fact-text {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.4;
+}
+
+/* Science quiz */
+.quiz-area {
+    text-align: center;
+    padding: 20px 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quiz-prompt {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.quiz-planet-display {
+    font-size: 5rem;
+    margin-bottom: 8px;
+}
+
+.quiz-hint {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* ---- Settings Screen ---- */
+.settings-section {
+    padding: 16px 0;
+}
+
+.settings-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.setting-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-card);
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    margin-bottom: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.setting-row-label {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Toggle switch */
+.toggle {
+    width: 56px;
+    height: 32px;
+    background: var(--text-light);
+    border-radius: 16px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    border: none;
+    flex-shrink: 0;
+}
+
+.toggle.on {
+    background: var(--accent-green);
+}
+
+.toggle::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 26px;
+    height: 26px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.toggle.on::after {
+    transform: translateX(24px);
+}
+
+.progress-card {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    margin-bottom: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.progress-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.progress-card-detail {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.reset-btn {
+    width: 100%;
+    height: var(--tap-min);
+    border: 2px solid var(--accent-red);
+    background: none;
+    color: var(--accent-red);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 24px;
+    transition: all 0.15s ease;
+}
+
+.reset-btn:active {
+    background: var(--accent-red);
+    color: #fff;
+    transform: scale(0.97);
+}
+
+.confirm-dialog {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.confirm-dialog.active {
+    display: flex;
+}
+
+.confirm-box {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    max-width: 320px;
+    width: 100%;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.confirm-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.confirm-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.confirm-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.confirm-actions button {
+    flex: 1;
+    height: 50px;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.confirm-actions button:active {
+    transform: scale(0.95);
+}
+
+.confirm-cancel {
+    background: var(--bg-secondary);
+    color: var(--text);
+}
+
+.confirm-danger {
+    background: var(--accent-red);
+    color: #fff;
+}
+
+/* ---- Confetti ---- */
+.confetti-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 300;
+    overflow: hidden;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    animation: confettiFall linear both;
+}
+
+/* ---- Keyframe Animations ---- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    70% { transform: scale(1.2); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes correctBounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+}
+
+@keyframes gentleShake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+}
+
+@keyframes confettiFall {
+    0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes starPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+@keyframes mascotWave {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-12deg); }
+    75% { transform: rotate(12deg); }
+}
+
+@keyframes mascotBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes mascotWiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-8deg); }
+    75% { transform: rotate(8deg); }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(30px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* ---- Responsive ---- */
+
+/* iPad and larger */
+@media (min-width: 768px) {
+    .screen {
+        padding: calc(32px + var(--safe-top)) calc(40px + var(--safe-right)) calc(32px + var(--safe-bottom)) calc(40px + var(--safe-left));
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .module-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .module-card {
+        padding: 32px 20px;
+    }
+
+    .module-card-icon {
+        font-size: 3.5rem;
+    }
+
+    .answer-grid {
+        max-width: 500px;
+    }
+
+    .answer-btn {
+        height: 90px;
+        font-size: 2.2rem;
+    }
+
+    .math-question-text {
+        font-size: 3rem;
+    }
+
+    .visual-object {
+        font-size: 2.5rem;
+    }
+
+    .solar-system {
+        max-width: 500px;
+        max-height: 500px;
+    }
+}
+
+/* Landscape adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+    .greeting {
+        padding: 8px 0 12px;
+    }
+
+    .greeting-mascot {
+        font-size: 2.5rem;
+    }
+
+    .screen {
+        padding-top: calc(12px + var(--safe-top));
+        padding-bottom: calc(12px + var(--safe-bottom));
+    }
+
+    .math-question {
+        padding: 8px 0;
+    }
+
+    .visual-objects {
+        padding: 10px 0;
+    }
+
+    .answer-btn {
+        height: 65px;
+    }
+
+    .mascot {
+        font-size: 2rem;
+        padding: 4px 0;
+    }
+
+    .solar-system {
+        max-height: 280px;
+    }
+}
+
+/* Landscape on iPad */
+@media (orientation: landscape) and (min-width: 768px) {
+    .module-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Parent gate progress indicator */
+.gear-progress {
+    position: absolute;
+    inset: 4px;
+    border-radius: var(--radius-md);
+    border: 3px solid transparent;
+    border-top-color: var(--accent-purple);
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+}
+
+.header-btn.holding .gear-progress {
+    opacity: 1;
+    animation: gearSpin 3s linear;
+}
+
+@keyframes gearSpin {
+    to { transform: rotate(1080deg); }
+}
+
+.header-btn {
+    position: relative;
+}

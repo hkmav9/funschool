@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="FunSchool">
+    <meta name="theme-color" content="#FF6B6B">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+    <link rel="apple-touch-icon" href="icon.svg">
+    <title>FunSchool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Home Screen -->
+    <div id="homeScreen" class="screen active">
+        <div class="header">
+            <button class="header-btn" id="settingsBtn" aria-label="Settings">
+                <span>&#9881;</span>
+                <div class="gear-progress"></div>
+            </button>
+            <span class="header-title">FunSchool</span>
+            <div class="star-counter" id="homeStarCounter">
+                <span class="star-icon">&#11088;</span>
+                <span class="star-count">0</span>
+            </div>
+        </div>
+        <div class="greeting">
+            <div class="avatar-wrapper" id="avatarWrapper">
+                <div class="avatar" id="avatar">
+                    <span class="avatar-default" id="avatarDefault">🦁</span>
+                    <img class="avatar-img" id="avatarImg" alt="Your photo">
+                </div>
+                <div class="avatar-badge">📷</div>
+                <div class="avatar-ring"></div>
+            </div>
+            <input type="file" id="avatarInput" accept="image/*" hidden>
+            <div class="greeting-text">Hi there!</div>
+            <div class="greeting-sub">Tap your picture to make it you!</div>
+        </div>
+        <div id="moduleCards"></div>
+    </div>
+
+    <!-- Module Screen -->
+    <div id="moduleScreen" class="screen">
+        <div class="module-header">
+            <button class="back-btn" id="backBtn" aria-label="Go back">&#8592;</button>
+            <span class="module-title" id="moduleTitle"></span>
+            <div class="module-stars" id="moduleStars">
+                <span>&#11088;</span>
+                <span class="star-count">0</span>
+            </div>
+        </div>
+        <div class="module-content" id="moduleContent"></div>
+        <div class="mascot" id="mascot">
+            <div class="mascot-emoji">&#129300;</div>
+            <div class="mascot-message"></div>
+        </div>
+    </div>
+
+    <!-- Settings Screen -->
+    <div id="settingsScreen" class="screen">
+        <div class="module-header">
+            <button class="back-btn" id="settingsBackBtn" aria-label="Go back">&#8592;</button>
+            <span class="module-title">Settings</span>
+            <div></div>
+        </div>
+
+        <div class="settings-section">
+            <div class="settings-label">Sound</div>
+            <div class="setting-row">
+                <span class="setting-row-label">Sound Effects</span>
+                <button class="toggle" id="soundToggle" aria-label="Toggle sound"></button>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <div class="settings-label">Progress</div>
+            <div id="progressCards"></div>
+        </div>
+
+        <button class="reset-btn" id="resetBtn">Reset All Progress</button>
+    </div>
+
+    <!-- Bottom Sheet (for planet details) -->
+    <div class="bottom-sheet-overlay" id="sheetOverlay"></div>
+    <div class="bottom-sheet" id="bottomSheet">
+        <div class="sheet-handle"></div>
+        <span class="sheet-planet-icon" id="sheetIcon"></span>
+        <div class="sheet-planet-name" id="sheetName"></div>
+        <div id="sheetFacts"></div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <!-- Confirm Dialog -->
+    <div class="confirm-dialog" id="confirmDialog">
+        <div class="confirm-box">
+            <div class="confirm-title">Reset Progress?</div>
+            <div class="confirm-text">This will erase all stars and progress. This cannot be undone.</div>
+            <div class="confirm-actions">
+                <button class="confirm-cancel" id="confirmCancel">Cancel</button>
+                <button class="confirm-danger" id="confirmReset">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js').catch(function () {});
+        }
+    </script>
+
+    <!-- Scripts in dependency order -->
+    <script src="storage.js"></script>
+    <script src="sounds.js"></script>
+    <script src="modules.js"></script>
+    <script src="rewards.js"></script>
+    <script src="math.js"></script>
+    <script src="science.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

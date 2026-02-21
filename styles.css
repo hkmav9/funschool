@@ -471,6 +471,35 @@ body {
     font-weight: 600;
 }
 
+/* ---- Generic Progress Bar (Reusable) ---- */
+.progress-bar-container {
+    padding: 12px 0;
+    max-width: 300px;
+    margin: 16px auto 0;
+}
+
+.progress-bar {
+    height: 10px;
+    background: var(--bg-secondary);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-orange), var(--accent-yellow));
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.progress-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 6px;
+    font-weight: 600;
+    text-align: center;
+}
+
 .visual-objects {
     display: flex;
     align-items: center;
@@ -627,6 +656,179 @@ body {
     z-index: 2;
 }
 
+.sun-visual {
+    position: absolute;
+    z-index: 2;
+    font-size: 2.5rem;
+}
+
+.sun-glow {
+    position: absolute;
+    inset: -15px;
+    background: radial-gradient(circle, rgba(255,215,0,0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: sunPulse 3s ease-in-out infinite;
+}
+
+@keyframes sunPulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.2); opacity: 1; }
+}
+
+/* CSS Planet visuals */
+.css-planet {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.css-planet-body {
+    border-radius: 50%;
+    box-shadow: inset -4px -4px 8px rgba(0,0,0,0.3), 0 0 12px rgba(255,255,255,0.1);
+    position: relative;
+}
+
+.css-planet-body::after {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    width: 30%;
+    height: 20%;
+    background: rgba(255,255,255,0.25);
+    border-radius: 50%;
+    filter: blur(3px);
+}
+
+.css-planet-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(70deg);
+    border: 2px solid rgba(200,200,200,0.5);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Explore progress */
+.explore-progress {
+    padding: 0 0 12px;
+}
+
+.explore-progress-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+}
+
+.explore-fill {
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple)) !important;
+}
+
+.explore-complete {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent-green);
+    margin-top: 6px;
+}
+
+/* Planet story in bottom sheet */
+.planet-story {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.planet-story-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.planet-story-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.planet-facts-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+/* Quiz progress */
+.quiz-progress {
+    padding: 0 0 8px;
+}
+
+.quiz-progress-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+}
+
+.quiz-fill {
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-green)) !important;
+}
+
+/* Quiz complete screen */
+.quiz-complete {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.quiz-complete-emoji {
+    font-size: 4rem;
+    margin-bottom: 12px;
+    animation: correctBounce 0.6s ease;
+}
+
+.quiz-complete-score {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.quiz-complete-msg {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.quiz-restart-btn {
+    margin-top: 20px;
+    height: 56px;
+    padding: 0 32px;
+    border: none;
+    background: var(--accent-blue);
+    color: #fff;
+    border-radius: var(--radius-lg);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.15s ease;
+}
+
+.quiz-restart-btn:active {
+    transform: scale(0.95);
+}
+
 .orbit-ring {
     position: absolute;
     border: 1px dashed var(--text-light);
@@ -720,7 +922,8 @@ body {
 .sheet-planet-icon {
     font-size: 4rem;
     text-align: center;
-    display: block;
+    display: flex;
+    justify-content: center;
     margin-bottom: 12px;
 }
 
@@ -774,6 +977,8 @@ body {
 .quiz-planet-display {
     font-size: 5rem;
     margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
 }
 
 .quiz-hint {
@@ -923,34 +1128,89 @@ body {
     margin-bottom: 20px;
 }
 
-.confirm-actions {
+/* Passcode Dots */
+.passcode-dots {
     display: flex;
-    gap: 12px;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 8px;
 }
 
-.confirm-actions button {
-    flex: 1;
-    height: 50px;
+.passcode-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2.5px solid var(--text-light);
+    background: transparent;
+    transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.passcode-dot.filled {
+    background: var(--accent-red);
+    border-color: var(--accent-red);
+    transform: scale(1.15);
+}
+
+/* Passcode Error */
+.passcode-error {
+    font-size: 0.85rem;
+    color: var(--accent-red);
+    font-weight: 600;
+    min-height: 24px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    margin-bottom: 8px;
+}
+
+.passcode-error.visible {
+    opacity: 1;
+    animation: headShake 0.4s ease;
+}
+
+@keyframes headShake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-6px); }
+    40%, 80% { transform: translateX(6px); }
+}
+
+/* Passcode Number Pad */
+.passcode-pad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+.passcode-key {
+    height: 56px;
     border: none;
-    border-radius: var(--radius-md);
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: transform 0.1s ease;
-}
-
-.confirm-actions button:active {
-    transform: scale(0.95);
-}
-
-.confirm-cancel {
+    border-radius: var(--radius-sm);
     background: var(--bg-secondary);
     color: var(--text);
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s ease, background 0.1s ease;
+    -webkit-tap-highlight-color: transparent;
+    font-family: var(--font);
 }
 
-.confirm-danger {
-    background: var(--accent-red);
-    color: #fff;
+.passcode-key:active {
+    transform: scale(0.92);
+    background: var(--text-light);
+}
+
+.passcode-cancel {
+    background: transparent;
+    color: var(--accent-red);
+    font-size: 1.3rem;
+}
+
+.passcode-delete {
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
 }
 
 /* ---- Confetti ---- */

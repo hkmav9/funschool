@@ -286,19 +286,27 @@
             if (newVal) playTapSound();
         });
 
-        // Reset progress
-        document.getElementById('resetBtn').addEventListener('click', function () {
-            document.getElementById('confirmDialog').classList.add('active');
-        });
+        // Reset progress with passcode
+        var PASSCODE = '2709';
+        var passcodeInput = '';
 
-        document.getElementById('confirmCancel').addEventListener('click', function () {
+        function resetPasscodeUI() {
+            passcodeInput = '';
+            var dots = document.querySelectorAll('#passcodeDots .passcode-dot');
+            dots.forEach(function (d) { d.classList.remove('filled'); });
+            var err = document.getElementById('passcodeError');
+            if (err) err.classList.remove('visible');
+        }
+
+        function closePasscodeDialog() {
             document.getElementById('confirmDialog').classList.remove('active');
-        });
+            resetPasscodeUI();
+        }
 
-        document.getElementById('confirmReset').addEventListener('click', function () {
+        function executeReset() {
             resetAllProgress();
             localStorage.removeItem(AVATAR_KEY);
-            document.getElementById('confirmDialog').classList.remove('active');
+            closePasscodeDialog();
             renderSettings();
             updateStarDisplay();
             // Reset avatar display
@@ -310,6 +318,66 @@
             if (defaultEl) { defaultEl.classList.remove('hidden'); defaultEl.textContent = getRandomAnimal(); }
             if (wrapper) wrapper.classList.remove('has-photo');
             if (greetingSub) greetingSub.textContent = 'Tap your picture to make it you!';
+        }
+
+        function onPasscodeKey(key) {
+            if (passcodeInput.length >= 4) return;
+            passcodeInput += key;
+
+            // Fill dots
+            var dots = document.querySelectorAll('#passcodeDots .passcode-dot');
+            dots.forEach(function (d, i) {
+                d.classList.toggle('filled', i < passcodeInput.length);
+            });
+
+            playTapSound();
+
+            // Check when 4 digits entered
+            if (passcodeInput.length === 4) {
+                setTimeout(function () {
+                    if (passcodeInput === PASSCODE) {
+                        executeReset();
+                    } else {
+                        var err = document.getElementById('passcodeError');
+                        if (err) err.classList.add('visible');
+                        // Clear after shake
+                        setTimeout(function () {
+                            resetPasscodeUI();
+                        }, 800);
+                    }
+                }, 200);
+            }
+        }
+
+        function onPasscodeDelete() {
+            if (passcodeInput.length === 0) return;
+            passcodeInput = passcodeInput.slice(0, -1);
+            var dots = document.querySelectorAll('#passcodeDots .passcode-dot');
+            dots.forEach(function (d, i) {
+                d.classList.toggle('filled', i < passcodeInput.length);
+            });
+            var err = document.getElementById('passcodeError');
+            if (err) err.classList.remove('visible');
+        }
+
+        document.getElementById('resetBtn').addEventListener('click', function () {
+            resetPasscodeUI();
+            document.getElementById('confirmDialog').classList.add('active');
+        });
+
+        document.getElementById('confirmCancel').addEventListener('click', function () {
+            closePasscodeDialog();
+        });
+
+        document.getElementById('passcodeDelete').addEventListener('click', function () {
+            onPasscodeDelete();
+        });
+
+        // Number key listeners
+        document.querySelectorAll('#passcodePad .passcode-key[data-key]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                onPasscodeKey(btn.getAttribute('data-key'));
+            });
         });
 
         // Initialize audio context on first interaction

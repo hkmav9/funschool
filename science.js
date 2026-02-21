@@ -3,8 +3,8 @@
 (function () {
     var PLANETS = [
         {
-            id: 'mercury', name: 'Mercury', emoji: '⚫',
-            color: '#B5B5B5', orbitPct: 14,
+            id: 'mercury', name: 'Mercury', emoji: '⚫', size: 0.5,
+            color: '#B5B5B5', svgColor: '#8C7853', orbitPct: 14,
             facts: [
                 { icon: '🏃', text: 'Mercury is the fastest planet!' },
                 { icon: '☀️', text: 'It is the closest to the Sun' },
@@ -13,8 +13,8 @@
             quizHint: 'The smallest and fastest planet'
         },
         {
-            id: 'venus', name: 'Venus', emoji: '🟡',
-            color: '#FDCB6E', orbitPct: 22,
+            id: 'venus', name: 'Venus', emoji: '🟡', size: 0.9,
+            color: '#FDCB6E', svgColor: '#FDB813', orbitPct: 22,
             facts: [
                 { icon: '🌡️', text: 'Venus is the hottest planet!' },
                 { icon: '☁️', text: 'It is covered in thick clouds' },
@@ -23,8 +23,8 @@
             quizHint: 'The hottest planet with thick clouds'
         },
         {
-            id: 'earth', name: 'Earth', emoji: '🌍',
-            color: '#4A90D9', orbitPct: 30,
+            id: 'earth', name: 'Earth', emoji: '🌍', size: 1.0,
+            color: '#4A90D9', svgColor: '#1E90FF', orbitPct: 30,
             facts: [
                 { icon: '🏠', text: 'This is where we live!' },
                 { icon: '💧', text: 'Earth has lots of water' },
@@ -33,8 +33,8 @@
             quizHint: 'The blue planet where we live'
         },
         {
-            id: 'mars', name: 'Mars', emoji: '🔴',
-            color: '#E17055', orbitPct: 38,
+            id: 'mars', name: 'Mars', emoji: '🔴', size: 0.6,
+            color: '#E17055', svgColor: '#E74C3C', orbitPct: 38,
             facts: [
                 { icon: '🟥', text: 'Mars is called the Red Planet!' },
                 { icon: '🤖', text: 'Robots explore Mars for us' },
@@ -43,8 +43,8 @@
             quizHint: 'The red planet with robots'
         },
         {
-            id: 'jupiter', name: 'Jupiter', emoji: '🟤',
-            color: '#FDCB6E', orbitPct: 52,
+            id: 'jupiter', name: 'Jupiter', emoji: '🟤', size: 1.8,
+            color: '#FDCB6E', svgColor: '#D4A574', orbitPct: 52,
             facts: [
                 { icon: '💪', text: 'Jupiter is the biggest planet!' },
                 { icon: '🌀', text: 'It has a giant storm called the Great Red Spot' },
@@ -53,8 +53,8 @@
             quizHint: 'The biggest planet with a giant storm'
         },
         {
-            id: 'saturn', name: 'Saturn', emoji: '🪐',
-            color: '#DFE6E9', orbitPct: 64,
+            id: 'saturn', name: 'Saturn', emoji: '🪐', size: 1.6,
+            color: '#DFE6E9', svgColor: '#F4D03F', orbitPct: 64,
             facts: [
                 { icon: '💍', text: 'Saturn has beautiful rings!' },
                 { icon: '🛁', text: 'Saturn could float in a giant bathtub!' },
@@ -63,8 +63,8 @@
             quizHint: 'The planet with beautiful rings'
         },
         {
-            id: 'uranus', name: 'Uranus', emoji: '🔵',
-            color: '#74B9FF', orbitPct: 76,
+            id: 'uranus', name: 'Uranus', emoji: '🔵', size: 1.2,
+            color: '#74B9FF', svgColor: '#3498DB', orbitPct: 76,
             facts: [
                 { icon: '🧊', text: 'Uranus is super cold and icy!' },
                 { icon: '🔄', text: 'It rolls on its side like a ball!' },
@@ -73,8 +73,8 @@
             quizHint: 'The icy planet that rolls on its side'
         },
         {
-            id: 'neptune', name: 'Neptune', emoji: '🔷',
-            color: '#0984E3', orbitPct: 88,
+            id: 'neptune', name: 'Neptune', emoji: '🔷', size: 1.2,
+            color: '#0984E3', svgColor: '#2E86DE', orbitPct: 88,
             facts: [
                 { icon: '🌊', text: 'Neptune is named after the sea god!' },
                 { icon: '💨', text: 'It has the strongest winds ever!' },
@@ -96,6 +96,41 @@
             var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
         }
         return a;
+    }
+
+    function renderPlanetSVG(planet, size) {
+        var baseSize = 60;
+        var scaledSize = baseSize * (planet.size || 1) * size;
+        var viewBox = (60 - scaledSize) / 2;
+
+        var svg = '<svg class="planet-svg" width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">';
+
+        // Special handling for Saturn with rings
+        if (planet.id === 'saturn') {
+            svg += '<ellipse cx="30" cy="32" rx="24" ry="8" fill="none" stroke="' + planet.svgColor + '" stroke-width="2" opacity="0.6"/>';
+            svg += '<ellipse cx="30" cy="32" rx="20" ry="6" fill="none" stroke="' + planet.svgColor + '" stroke-width="1.5" opacity="0.4"/>';
+            svg += '<circle cx="30" cy="30" r="' + scaledSize / 2 + '" fill="' + planet.svgColor + '" style="filter:drop-shadow(0 2px 4px rgba(0,0,0,0.2))"/>';
+        }
+        // Special handling for Earth with blue water
+        else if (planet.id === 'earth') {
+            svg += '<circle cx="30" cy="30" r="' + scaledSize / 2 + '" fill="' + planet.svgColor + '"/>';
+            svg += '<circle cx="24" cy="26" r="' + (scaledSize / 8) + '" fill="#55EFC4" opacity="0.7"/>';
+            svg += '<circle cx="36" cy="35" r="' + (scaledSize / 10) + '" fill="#55EFC4" opacity="0.7"/>';
+            svg += '<circle cx="30" cy="30" r="' + scaledSize / 2 + '" fill="none" stroke="rgba(30,144,255,0.3)" stroke-width="1"/>';
+        }
+        // Special handling for Jupiter with storm
+        else if (planet.id === 'jupiter') {
+            svg += '<circle cx="30" cy="30" r="' + scaledSize / 2 + '" fill="' + planet.svgColor + '"/>';
+            svg += '<ellipse cx="30" cy="28" rx="' + (scaledSize / 2.5) + '" ry="' + (scaledSize / 6) + '" fill="#D9534F" opacity="0.6"/>';
+            svg += '<path d="M ' + (30 - scaledSize / 3) + ' 26 Q 30 24 ' + (30 + scaledSize / 3) + ' 26" stroke="rgba(255,255,255,0.3)" stroke-width="1" fill="none"/>';
+        }
+        // Default circular planet
+        else {
+            svg += '<circle cx="30" cy="30" r="' + scaledSize / 2 + '" fill="' + planet.svgColor + '" style="filter:drop-shadow(0 2px 4px rgba(0,0,0,0.15))"/>';
+        }
+
+        svg += '</svg>';
+        return svg;
     }
 
     function renderModeTabs() {
@@ -154,13 +189,22 @@
             var isExplored = explored.indexOf(p.id) !== -1;
 
             html += '<button class="planet-btn' + (isExplored ? ' explored' : '') + '" data-planet="' + p.id + '" style="left:calc(' + x + '% - 30px);top:calc(' + y + '% - 30px);">';
-            html += p.emoji;
+            html += renderPlanetSVG(p, 1);
             html += '<span class="planet-label">' + p.name + '</span>';
             html += '</button>';
         });
 
         html += '</div>';
-        html += '<div style="text-align:center;padding:16px 0;color:var(--text-secondary);font-weight:600;">Tap a planet to explore! (' + explored.length + '/' + PLANETS.length + ')</div>';
+
+        // Add progress bar
+        html += renderProgressBar({
+            current: explored.length,
+            max: PLANETS.length,
+            label: 'Planets Explored',
+            color: '#4ECDC4'
+        });
+
+        html += '<div style="text-align:center;padding:8px 0;color:var(--text-secondary);font-weight:600;font-size:0.9rem;">Tap a planet to learn more!</div>';
 
         el.innerHTML = html;
 

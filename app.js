@@ -3,7 +3,8 @@
 (function () {
     var CATEGORY_LABELS = {
         'Math': '🔢 Math',
-        'Science': '🔬 Science'
+        'Science': '🔬 Science',
+        'Thinking': '🧠 Thinking'
     };
 
     /* --- Screen Navigation --- */

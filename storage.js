@@ -21,6 +21,10 @@ function getDefaultData() {
                 quizCorrect: 0,
                 quizTotal: 0,
                 stars: 0
+            },
+            'critical-thinking': {
+                completed: {},
+                stars: 0
             }
         }
     };

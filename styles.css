@@ -1448,3 +1448,321 @@ body {
     max-width: 60px;
     max-height: 60px;
 }
+
+/* ================================================================
+   CRITICAL THINKING MODULE
+   ================================================================ */
+
+/* ── Story List ─────────────────────────────────────────────────── */
+.ct-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+}
+
+.ct-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--bg-card);
+    border: 2px solid #6C5CE722;
+    border-radius: 16px;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    position: relative;
+}
+
+.ct-card:active {
+    transform: scale(0.97);
+}
+
+.ct-card-icon {
+    font-size: 2.2rem;
+    flex-shrink: 0;
+}
+
+.ct-card-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.ct-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 3px;
+}
+
+.ct-card-meta {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+}
+
+.ct-card-stars {
+    display: flex;
+    gap: 3px;
+}
+
+.ct-mini-star {
+    font-size: 1rem;
+    color: var(--bg-secondary);
+}
+
+.ct-mini-star.filled {
+    color: #FFD93D;
+}
+
+.ct-card-badge {
+    font-size: 1.1rem;
+    color: #6C5CE7;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+/* ── Story Reader ───────────────────────────────────────────────── */
+.ct-read {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.ct-back-btn {
+    background: none;
+    border: none;
+    color: #6C5CE7;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 6px 0;
+    align-self: flex-start;
+}
+
+.ct-story-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.ct-story-icon {
+    font-size: 3rem;
+}
+
+.ct-story-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin: 0;
+    text-align: center;
+}
+
+.ct-story-body {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 20px;
+    line-height: 1.8;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.ct-story-body p {
+    margin: 0 0 14px 0;
+}
+
+.ct-story-body p:last-child {
+    margin-bottom: 0;
+}
+
+.ct-ready-btn {
+    background: linear-gradient(135deg, #6C5CE7, #a29bfe);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    padding: 16px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.15s ease;
+}
+
+.ct-ready-btn:active {
+    transform: scale(0.97);
+}
+
+/* ── Quiz ───────────────────────────────────────────────────────── */
+.ct-quiz {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.ct-quiz-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ct-quiz-counter {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.ct-quiz-bar {
+    height: 6px;
+    background: var(--bg-secondary);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.ct-quiz-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #6C5CE7, #a29bfe);
+    border-radius: 3px;
+    transition: width 0.4s ease;
+}
+
+.ct-quiz-question {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.5;
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 18px;
+}
+
+.ct-quiz-hint {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 10px 14px;
+}
+
+.ct-quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ct-option-btn {
+    background: var(--bg-card);
+    border: 2px solid var(--bg-secondary);
+    border-radius: 14px;
+    padding: 14px 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.12s ease, border-color 0.15s ease;
+    line-height: 1.4;
+}
+
+.ct-option-btn:active:not([disabled]) {
+    transform: scale(0.98);
+}
+
+.ct-option-btn.correct {
+    background: #00b89422;
+    border-color: #00b894;
+    color: #00b894;
+}
+
+.ct-option-btn.wrong {
+    background: #d6336c22;
+    border-color: #d6336c;
+    color: #d6336c;
+}
+
+.ct-option-btn[disabled] {
+    cursor: default;
+}
+
+/* ── Results ────────────────────────────────────────────────────── */
+.ct-results {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+}
+
+.ct-results-icon {
+    font-size: 3.5rem;
+}
+
+.ct-results-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.ct-results-stars {
+    display: flex;
+    gap: 8px;
+}
+
+.ct-result-star {
+    font-size: 2.4rem;
+    color: var(--bg-secondary);
+    transition: color 0.3s ease;
+}
+
+.ct-result-star.filled {
+    color: #FFD93D;
+    text-shadow: 0 0 12px #FFD93D88;
+}
+
+.ct-results-score {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.ct-results-msg {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    max-width: 280px;
+    line-height: 1.5;
+}
+
+.ct-results-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.ct-retry-btn {
+    background: var(--bg-card);
+    border: 2px solid #6C5CE7;
+    border-radius: 14px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #6C5CE7;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.15s ease;
+}
+
+.ct-retry-btn:active {
+    transform: scale(0.97);
+}
+
+.ct-error {
+    text-align: center;
+    padding: 40px 16px;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}

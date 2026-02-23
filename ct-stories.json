@@ -1,0 +1,110 @@
+{
+    "_format": "ct-stories v1",
+    "_instructions": {
+        "Add a new story": "Copy one story object from the 'stories' array and add it with a unique id.",
+        "Fields": {
+            "id": "Unique string slug (e.g. 'the-lion-and-mouse')",
+            "title": "Story title shown on the card",
+            "icon": "Single emoji shown on card and reader",
+            "level": "Difficulty 1 (easy) to 3 (hard)",
+            "readingTime": "Estimated read time shown on card (e.g. '2 min')",
+            "story": "Full story text. Use \\n for paragraph breaks.",
+            "questions": [
+                {
+                    "question": "The question text",
+                    "options": ["Choice A", "Choice B", "Choice C", "Choice D"],
+                    "correct": 0,
+                    "hint": "Optional hint shown below the question (leave empty string to hide)"
+                }
+            ]
+        }
+    },
+    "stories": [
+        {
+            "id": "the-crow-and-pitcher",
+            "title": "The Thirsty Crow",
+            "icon": "🐦",
+            "level": 1,
+            "readingTime": "2 min",
+            "story": "On a hot summer day, a crow was flying across the land looking for water. He had been flying for a long time and was very, very thirsty.\n\nFinally, the crow spotted a tall pitcher sitting near a farmhouse. He flew down quickly and looked inside. There was water at the bottom — but only a little, and the pitcher was tall. No matter how hard he tried, his beak could not reach the water.\n\nThe crow sat down and thought. He looked at the ground around him. He saw small pebbles everywhere.\n\nSuddenly, he had an idea! The crow picked up a pebble in his beak and dropped it into the pitcher. Then another. And another. Each time he added a pebble, the water rose a little higher.\n\nAfter many pebbles, the water had risen all the way to the top. The crow dipped his beak in and drank until he was no longer thirsty.\n\nThe crow had solved his problem by thinking carefully instead of giving up.",
+            "questions": [
+                {
+                    "question": "Why couldn't the crow reach the water at first?",
+                    "options": [
+                        "The pitcher was too heavy to lift",
+                        "The water was at the bottom and the pitcher was tall",
+                        "The water was frozen",
+                        "Another bird was blocking him"
+                    ],
+                    "correct": 1,
+                    "hint": "Think about the shape of the pitcher and where the water was."
+                },
+                {
+                    "question": "What made the water rise inside the pitcher?",
+                    "options": [
+                        "The crow poured more water in",
+                        "The sun heated the water",
+                        "The crow dropped pebbles into the pitcher",
+                        "The crow shook the pitcher"
+                    ],
+                    "correct": 2,
+                    "hint": "What did the crow pick up from the ground?"
+                },
+                {
+                    "question": "What is the best lesson from this story?",
+                    "options": [
+                        "Always carry water when you travel",
+                        "Crows are smarter than other birds",
+                        "Thinking carefully can help you solve hard problems",
+                        "Never share your water"
+                    ],
+                    "correct": 2,
+                    "hint": "What did the crow do instead of giving up?"
+                }
+            ]
+        },
+        {
+            "id": "the-boy-who-cried-wolf",
+            "title": "The Boy Who Cried Wolf",
+            "icon": "🐺",
+            "level": 1,
+            "readingTime": "2 min",
+            "story": "Once upon a time, a young shepherd boy watched over his village's flock of sheep on a hillside every day. It was a lonely job, and the boy often felt bored.\n\nOne day, just to have some excitement, he ran down to the village shouting, 'Wolf! Wolf! A wolf is chasing the sheep!'\n\nThe villagers grabbed their tools and rushed up the hill to help. But when they arrived, there was no wolf. The boy laughed at their worried faces. The villagers went back to the village, feeling angry.\n\nA few days later, the boy did it again. 'Wolf! Wolf!' he cried. Again the villagers came running. Again, there was no wolf. This time they were furious.\n\nThen one evening, a real wolf appeared from the forest and began attacking the sheep. The terrified boy ran to the village screaming, 'Wolf! Wolf! Please help!'\n\nBut this time, no one came. The villagers thought he was tricking them again.\n\nThe boy lost many sheep that day. He had learned a painful lesson: when you lie, people stop believing you — even when you tell the truth.",
+            "questions": [
+                {
+                    "question": "Why did the boy shout 'Wolf!' the first time?",
+                    "options": [
+                        "He saw a real wolf",
+                        "He wanted to test the villagers",
+                        "He was bored and wanted excitement",
+                        "He was trying to protect the sheep"
+                    ],
+                    "correct": 2,
+                    "hint": "The story says the boy felt bored and lonely."
+                },
+                {
+                    "question": "Why did no one come to help when the real wolf appeared?",
+                    "options": [
+                        "The villagers were asleep",
+                        "They didn't hear the boy",
+                        "They thought it was another trick",
+                        "They were scared of wolves"
+                    ],
+                    "correct": 2,
+                    "hint": "Think about what the boy had done before."
+                },
+                {
+                    "question": "What should the boy have done differently?",
+                    "options": [
+                        "Shout louder so the villagers always came",
+                        "Stayed honest and only called for help when he truly needed it",
+                        "Found a different job that was not boring",
+                        "Built a fence around the sheep himself"
+                    ],
+                    "correct": 1,
+                    "hint": "What important value did the boy lose by lying?"
+                }
+            ]
+        }
+    ]
+}

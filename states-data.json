@@ -1,0 +1,606 @@
+{
+    "_format": "states-data v1",
+    "_instructions": "Add a state by copying an object into the 'states' array. Fields: name, abbr, capital, emoji (used as the big 'image'), color (hex), facts (array of 3+ short kid-friendly strings).",
+    "states": [
+        {
+            "name": "Alabama",
+            "abbr": "AL",
+            "capital": "Montgomery",
+            "emoji": "🚀",
+            "color": "#FF6B6B",
+            "facts": [
+                "The rockets that went to the Moon were built in Alabama!",
+                "Alabama has beautiful white sand beaches by the Gulf of Mexico.",
+                "The state flower is the Camellia — a pretty pink flower."
+            ]
+        },
+        {
+            "name": "Alaska",
+            "abbr": "AK",
+            "capital": "Juneau",
+            "emoji": "🐻",
+            "color": "#74B9FF",
+            "facts": [
+                "Alaska is the BIGGEST state in all of America — it's huge!",
+                "Alaska has giant brown bears, bald eagles, and moose.",
+                "In summer, the sun shines even at midnight — it never gets dark!"
+            ]
+        },
+        {
+            "name": "Arizona",
+            "abbr": "AZ",
+            "capital": "Phoenix",
+            "emoji": "🌵",
+            "color": "#FDCB6E",
+            "facts": [
+                "The Grand Canyon is in Arizona — one of the biggest holes on Earth!",
+                "Saguaro cactus plants in Arizona can live for 200 years!",
+                "Arizona is very sunny and warm — it barely ever snows there."
+            ]
+        },
+        {
+            "name": "Arkansas",
+            "abbr": "AR",
+            "capital": "Little Rock",
+            "emoji": "💎",
+            "color": "#A29BFE",
+            "facts": [
+                "You can dig for real diamonds in Arkansas — and keep them if you find one!",
+                "Arkansas has beautiful rivers, forests, and hot springs.",
+                "Arkansas is called the Natural State for all its beautiful nature."
+            ]
+        },
+        {
+            "name": "California",
+            "abbr": "CA",
+            "capital": "Sacramento",
+            "emoji": "🎬",
+            "color": "#FF7675",
+            "facts": [
+                "California is home to Disneyland and Hollywood movies!",
+                "The biggest trees in the world — Giant Sequoias — grow in California.",
+                "California grows more fruits and vegetables than any other state."
+            ]
+        },
+        {
+            "name": "Colorado",
+            "abbr": "CO",
+            "capital": "Denver",
+            "emoji": "⛷️",
+            "color": "#0984E3",
+            "facts": [
+                "Colorado has the Rocky Mountains — great for skiing in winter!",
+                "Denver is called the Mile High City because it sits so high up.",
+                "Colorado has bighorn sheep — they climb super steep rocky mountains!"
+            ]
+        },
+        {
+            "name": "Connecticut",
+            "abbr": "CT",
+            "capital": "Hartford",
+            "emoji": "⛵",
+            "color": "#00B894",
+            "facts": [
+                "Connecticut was one of the very first states in America!",
+                "The first hamburger was sold in Connecticut way back in 1895.",
+                "Connecticut has beautiful harbors with sailboats."
+            ]
+        },
+        {
+            "name": "Delaware",
+            "abbr": "DE",
+            "capital": "Dover",
+            "emoji": "🦋",
+            "color": "#FD79A8",
+            "facts": [
+                "Delaware was the FIRST state to join the United States — number 1!",
+                "Delaware is called the First State because of this.",
+                "Delaware is one of the tiniest states, but it came first!"
+            ]
+        },
+        {
+            "name": "Florida",
+            "abbr": "FL",
+            "capital": "Tallahassee",
+            "emoji": "🐊",
+            "color": "#00CEC9",
+            "facts": [
+                "Florida is home to Disney World — the most magical place on Earth!",
+                "Florida has real alligators living in its swamps and lakes.",
+                "Florida is called the Sunshine State — it's warm and sunny almost every day!"
+            ]
+        },
+        {
+            "name": "Georgia",
+            "abbr": "GA",
+            "capital": "Atlanta",
+            "emoji": "🍑",
+            "color": "#E17055",
+            "facts": [
+                "Georgia grows more peaches than almost any other state — yum!",
+                "Georgia is called the Peach State.",
+                "Atlanta, the capital, hosted the 1996 Summer Olympics!"
+            ]
+        },
+        {
+            "name": "Hawaii",
+            "abbr": "HI",
+            "capital": "Honolulu",
+            "emoji": "🌺",
+            "color": "#E84393",
+            "facts": [
+                "Hawaii is the only state made of islands in the middle of the ocean!",
+                "Hawaii has volcanoes — some are still active and making new land!",
+                "Hawaii grows pineapples and macadamia nuts."
+            ]
+        },
+        {
+            "name": "Idaho",
+            "abbr": "ID",
+            "capital": "Boise",
+            "emoji": "🥔",
+            "color": "#81ECEC",
+            "facts": [
+                "Idaho grows more potatoes than any other state!",
+                "Idaho is called the Gem State because it has so many beautiful gemstones.",
+                "The Snake River runs through Idaho making beautiful canyons."
+            ]
+        },
+        {
+            "name": "Illinois",
+            "abbr": "IL",
+            "capital": "Springfield",
+            "emoji": "🌆",
+            "color": "#6C5CE7",
+            "facts": [
+                "Chicago, in Illinois, is famous for its yummy deep-dish pizza!",
+                "President Abraham Lincoln lived in Illinois most of his life.",
+                "Illinois is called the Land of Lincoln."
+            ]
+        },
+        {
+            "name": "Indiana",
+            "abbr": "IN",
+            "capital": "Indianapolis",
+            "emoji": "🏎️",
+            "color": "#E84393",
+            "facts": [
+                "Indiana is famous for the Indianapolis 500 — a super fast car race!",
+                "Indiana is called the Hoosier State.",
+                "Indiana has beautiful sand dunes along Lake Michigan."
+            ]
+        },
+        {
+            "name": "Iowa",
+            "abbr": "IA",
+            "capital": "Des Moines",
+            "emoji": "🌽",
+            "color": "#FDCB6E",
+            "facts": [
+                "Iowa grows more corn than almost any other state!",
+                "Iowa is called the Hawkeye State.",
+                "Iowa has rolling green hills and farms as far as you can see."
+            ]
+        },
+        {
+            "name": "Kansas",
+            "abbr": "KS",
+            "capital": "Topeka",
+            "emoji": "🌻",
+            "color": "#F9CA24",
+            "facts": [
+                "Kansas is covered in golden sunflowers — millions of them!",
+                "Kansas is famous for big flat prairies that stretch forever.",
+                "Dorothy from The Wizard of Oz was from Kansas!"
+            ]
+        },
+        {
+            "name": "Kentucky",
+            "abbr": "KY",
+            "capital": "Frankfort",
+            "emoji": "🐎",
+            "color": "#6AB04C",
+            "facts": [
+                "Kentucky is famous for beautiful horses and the Kentucky Derby horse race!",
+                "Kentucky has the longest cave system in the world — Mammoth Cave!",
+                "Kentucky is called the Bluegrass State because of its special blue-green grass."
+            ]
+        },
+        {
+            "name": "Louisiana",
+            "abbr": "LA",
+            "capital": "Baton Rouge",
+            "emoji": "🎺",
+            "color": "#6C5CE7",
+            "facts": [
+                "Louisiana has the most fun party in America called Mardi Gras!",
+                "New Orleans has the most amazing jazz music in the world!",
+                "Louisiana is famous for yummy food like gumbo and beignets."
+            ]
+        },
+        {
+            "name": "Maine",
+            "abbr": "ME",
+            "capital": "Augusta",
+            "emoji": "🦞",
+            "color": "#E74C3C",
+            "facts": [
+                "Maine is famous for its yummy lobsters caught from the cold ocean!",
+                "Maine is the most northeastern state — it sees the sunrise first!",
+                "Maine has beautiful rocky coastlines with tall lighthouses."
+            ]
+        },
+        {
+            "name": "Maryland",
+            "abbr": "MD",
+            "capital": "Annapolis",
+            "emoji": "🦀",
+            "color": "#F39C12",
+            "facts": [
+                "Maryland is famous for delicious blue crabs from Chesapeake Bay!",
+                "Maryland is called the Old Line State.",
+                "The US Naval Academy is in Annapolis, Maryland — where navy heroes train."
+            ]
+        },
+        {
+            "name": "Massachusetts",
+            "abbr": "MA",
+            "capital": "Boston",
+            "emoji": "🦃",
+            "color": "#E74C3C",
+            "facts": [
+                "The Pilgrims landed near Plymouth, Massachusetts way back in 1620!",
+                "The very first Thanksgiving was celebrated in Massachusetts.",
+                "Boston has lots of exciting history from America's very beginning."
+            ]
+        },
+        {
+            "name": "Michigan",
+            "abbr": "MI",
+            "capital": "Lansing",
+            "emoji": "🚗",
+            "color": "#3D5A80",
+            "facts": [
+                "Michigan is surrounded by the Great Lakes — the biggest freshwater lakes ever!",
+                "Most cars made in America come from Detroit, Michigan.",
+                "Michigan is shaped like a mitten — you can use your hand as a map!"
+            ]
+        },
+        {
+            "name": "Minnesota",
+            "abbr": "MN",
+            "capital": "Saint Paul",
+            "emoji": "🌲",
+            "color": "#44BD32",
+            "facts": [
+                "Minnesota has over 10,000 lakes — more lakes than almost anywhere!",
+                "Minnesota gets very cold and snowy in winter.",
+                "Minnesota is called the Land of 10,000 Lakes."
+            ]
+        },
+        {
+            "name": "Mississippi",
+            "abbr": "MS",
+            "capital": "Jackson",
+            "emoji": "🎸",
+            "color": "#8E44AD",
+            "facts": [
+                "The mighty Mississippi River runs along the edge of this state!",
+                "Mississippi is famous for blues music — a type of music that tells stories.",
+                "Mississippi is called the Magnolia State for its beautiful magnolia trees."
+            ]
+        },
+        {
+            "name": "Missouri",
+            "abbr": "MO",
+            "capital": "Jefferson City",
+            "emoji": "🌉",
+            "color": "#E67E22",
+            "facts": [
+                "The Gateway Arch in St. Louis is the tallest arch in the whole world!",
+                "Missouri is called the Show-Me State.",
+                "The Missouri River, one of America's longest rivers, flows through here."
+            ]
+        },
+        {
+            "name": "Montana",
+            "abbr": "MT",
+            "capital": "Helena",
+            "emoji": "🦌",
+            "color": "#27AE60",
+            "facts": [
+                "Montana is called Big Sky Country because the sky looks SO wide and huge!",
+                "Glacier National Park in Montana has amazing icy mountains.",
+                "Montana has more elk, deer, and bears than people!"
+            ]
+        },
+        {
+            "name": "Nebraska",
+            "abbr": "NE",
+            "capital": "Lincoln",
+            "emoji": "🌾",
+            "color": "#D4AC0D",
+            "facts": [
+                "Nebraska has Chimney Rock — a tall rock that looks just like a chimney!",
+                "Nebraska has flat wide prairies in the middle of America.",
+                "Nebraska is called the Cornhusker State because it grows lots of corn."
+            ]
+        },
+        {
+            "name": "Nevada",
+            "abbr": "NV",
+            "capital": "Carson City",
+            "emoji": "⭐",
+            "color": "#C0392B",
+            "facts": [
+                "Las Vegas, Nevada has the most bright lights and shows in the world!",
+                "Nevada is mostly desert — hot, dry, and very sunny.",
+                "Nevada has mysterious Area 51 — a famous secret place!"
+            ]
+        },
+        {
+            "name": "New Hampshire",
+            "abbr": "NH",
+            "capital": "Concord",
+            "emoji": "🍁",
+            "color": "#E74C3C",
+            "facts": [
+                "New Hampshire was one of the very first states to want independence!",
+                "New Hampshire has the most beautiful colorful leaves in autumn.",
+                "New Hampshire's motto is 'Live Free or Die!' — very brave words!"
+            ]
+        },
+        {
+            "name": "New Jersey",
+            "abbr": "NJ",
+            "capital": "Trenton",
+            "emoji": "🎡",
+            "color": "#16A085",
+            "facts": [
+                "New Jersey has famous beaches and fun boardwalks to play on!",
+                "Thomas Edison — who invented the light bulb — lived in New Jersey.",
+                "New Jersey is called the Garden State because it grows lots of vegetables."
+            ]
+        },
+        {
+            "name": "New Mexico",
+            "abbr": "NM",
+            "capital": "Santa Fe",
+            "emoji": "🌶️",
+            "color": "#C0392B",
+            "facts": [
+                "New Mexico has beautiful red and orange desert landscapes!",
+                "New Mexico has the most hot air balloon festivals in the whole world!",
+                "Ancient people built their homes right into the cliffs there long ago."
+            ]
+        },
+        {
+            "name": "New York",
+            "abbr": "NY",
+            "capital": "Albany",
+            "emoji": "🗽",
+            "color": "#2980B9",
+            "facts": [
+                "The Statue of Liberty is in New York — a huge gift from France!",
+                "New York City is the biggest city in America — millions of people live there!",
+                "Niagara Falls, one of the world's biggest waterfalls, is in New York."
+            ]
+        },
+        {
+            "name": "North Carolina",
+            "abbr": "NC",
+            "capital": "Raleigh",
+            "emoji": "✈️",
+            "color": "#E74C3C",
+            "facts": [
+                "The Wright Brothers flew the very FIRST airplane in North Carolina in 1903!",
+                "North Carolina has beautiful mountains AND beaches.",
+                "North Carolina grows more sweet potatoes than any other state!"
+            ]
+        },
+        {
+            "name": "North Dakota",
+            "abbr": "ND",
+            "capital": "Bismarck",
+            "emoji": "🌾",
+            "color": "#F39C12",
+            "facts": [
+                "North Dakota has the beautiful Badlands — strange bumpy rock hills.",
+                "North Dakota grows lots of sunflowers and wheat.",
+                "North Dakota is very cold in winter but gorgeous in summer!"
+            ]
+        },
+        {
+            "name": "Ohio",
+            "abbr": "OH",
+            "capital": "Columbus",
+            "emoji": "🚀",
+            "color": "#2471A3",
+            "facts": [
+                "More astronauts came from Ohio than any other state — including Neil Armstrong!",
+                "Ohio is called the Buckeye State for its buckeye trees.",
+                "The Rock and Roll Hall of Fame is in Cleveland, Ohio — a music museum!"
+            ]
+        },
+        {
+            "name": "Oklahoma",
+            "abbr": "OK",
+            "capital": "Oklahoma City",
+            "emoji": "🌪️",
+            "color": "#8E44AD",
+            "facts": [
+                "Oklahoma is in Tornado Alley — big spinning tornadoes sometimes visit!",
+                "Oklahoma has amazing Native American history and colorful powwows.",
+                "Oklahoma is called the Sooner State."
+            ]
+        },
+        {
+            "name": "Oregon",
+            "abbr": "OR",
+            "capital": "Salem",
+            "emoji": "🌲",
+            "color": "#27AE60",
+            "facts": [
+                "Oregon has Crater Lake — the deepest and most blue lake in all of America!",
+                "Oregon's forests are SO green because it rains a lot there.",
+                "Oregon has both beaches AND mountains — you can visit both in one day!"
+            ]
+        },
+        {
+            "name": "Pennsylvania",
+            "abbr": "PA",
+            "capital": "Harrisburg",
+            "emoji": "🔔",
+            "color": "#D35400",
+            "facts": [
+                "The Liberty Bell is in Philadelphia, Pennsylvania — it rang when America became free!",
+                "America's Declaration of Independence was signed in Pennsylvania!",
+                "Pennsylvania has Hershey — the chocolate capital of the US!"
+            ]
+        },
+        {
+            "name": "Rhode Island",
+            "abbr": "RI",
+            "capital": "Providence",
+            "emoji": "⚓",
+            "color": "#1A5276",
+            "facts": [
+                "Rhode Island is the SMALLEST state in America — tiny but mighty!",
+                "You can drive across Rhode Island in under one hour!",
+                "Rhode Island has beautiful harbors filled with sailing boats."
+            ]
+        },
+        {
+            "name": "South Carolina",
+            "abbr": "SC",
+            "capital": "Columbia",
+            "emoji": "🌴",
+            "color": "#1E8449",
+            "facts": [
+                "South Carolina has beautiful beaches with warm water and soft sand!",
+                "South Carolina grows lots of peaches and sweet tea is very popular there.",
+                "The palmetto tree is South Carolina's symbol — it's on the state flag!"
+            ]
+        },
+        {
+            "name": "South Dakota",
+            "abbr": "SD",
+            "capital": "Pierre",
+            "emoji": "🗿",
+            "color": "#884EA0",
+            "facts": [
+                "Mount Rushmore is in South Dakota — 4 giant president faces carved in rock!",
+                "South Dakota has the Badlands — a landscape that looks like the moon!",
+                "South Dakota has lots of wild bison roaming free on the prairies."
+            ]
+        },
+        {
+            "name": "Tennessee",
+            "abbr": "TN",
+            "capital": "Nashville",
+            "emoji": "🎵",
+            "color": "#E74C3C",
+            "facts": [
+                "Nashville, Tennessee is the music capital of America — especially country music!",
+                "Tennessee is called the Volunteer State.",
+                "Great Smoky Mountains National Park is in Tennessee — very beautiful!"
+            ]
+        },
+        {
+            "name": "Texas",
+            "abbr": "TX",
+            "capital": "Austin",
+            "emoji": "⭐",
+            "color": "#B7950B",
+            "facts": [
+                "Texas is the second BIGGEST state in all of America!",
+                "Texas was once its own country — it's called the Lone Star State!",
+                "Cowboys and ranches are famous in Texas — yeehaw!"
+            ]
+        },
+        {
+            "name": "Utah",
+            "abbr": "UT",
+            "capital": "Salt Lake City",
+            "emoji": "🏜️",
+            "color": "#CA6F1E",
+            "facts": [
+                "Utah has Arches National Park with over 2,000 natural stone arches!",
+                "The Great Salt Lake is SO salty you float in it like a cork!",
+                "Utah has five national parks — more than almost any other state!"
+            ]
+        },
+        {
+            "name": "Vermont",
+            "abbr": "VT",
+            "capital": "Montpelier",
+            "emoji": "🍁",
+            "color": "#1E8449",
+            "facts": [
+                "Vermont makes more maple syrup than any other state — yum on pancakes!",
+                "Vermont has beautiful snowy winters and colorful fall leaves.",
+                "Vermont is one of the smallest and most peaceful states."
+            ]
+        },
+        {
+            "name": "Virginia",
+            "abbr": "VA",
+            "capital": "Richmond",
+            "emoji": "🏛️",
+            "color": "#1A5276",
+            "facts": [
+                "More US presidents were born in Virginia than any other state — 8 presidents!",
+                "Virginia is called the Old Dominion — one of the first 13 states.",
+                "Jamestown, Virginia was the first English settlement in America!"
+            ]
+        },
+        {
+            "name": "Washington",
+            "abbr": "WA",
+            "capital": "Olympia",
+            "emoji": "🍎",
+            "color": "#16A085",
+            "facts": [
+                "Washington grows more apples than any other state!",
+                "Seattle has a famous Space Needle tower you can see for miles.",
+                "Mount Rainier in Washington is a giant snow-covered sleeping volcano!"
+            ]
+        },
+        {
+            "name": "West Virginia",
+            "abbr": "WV",
+            "capital": "Charleston",
+            "emoji": "⛰️",
+            "color": "#6E2F9E",
+            "facts": [
+                "West Virginia has the most beautiful mountains in the eastern USA!",
+                "West Virginia is called the Mountain State.",
+                "West Virginia separated from Virginia during the Civil War to stay united."
+            ]
+        },
+        {
+            "name": "Wisconsin",
+            "abbr": "WI",
+            "capital": "Madison",
+            "emoji": "🧀",
+            "color": "#F39C12",
+            "facts": [
+                "Wisconsin makes more cheese than any other state — it's the Dairy State!",
+                "Wisconsin also produces lots of milk and butter.",
+                "Wisconsin has beautiful green forests and sparkling blue lakes."
+            ]
+        },
+        {
+            "name": "Wyoming",
+            "abbr": "WY",
+            "capital": "Cheyenne",
+            "emoji": "🦬",
+            "color": "#784212",
+            "facts": [
+                "Yellowstone National Park is in Wyoming — it has amazing geysers!",
+                "Old Faithful is a geyser that shoots hot water into the air every hour!",
+                "Wyoming has the most wild bison roaming free in all of America!"
+            ]
+        }
+    ]
+}

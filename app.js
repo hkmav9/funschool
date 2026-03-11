@@ -4,7 +4,8 @@
     var CATEGORY_LABELS = {
         'Math': '🔢 Math',
         'Science': '🔬 Science',
-        'Thinking': '🧠 Thinking'
+        'Thinking': '🧠 Thinking',
+        'Geography': '🗺️ Geography'
     };
 
     /* --- Screen Navigation --- */

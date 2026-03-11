@@ -25,6 +25,10 @@ function getDefaultData() {
             'critical-thinking': {
                 completed: {},
                 stars: 0
+            },
+            'usa-states': {
+                visited: [],
+                stars: 0
             }
         }
     };

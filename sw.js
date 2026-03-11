@@ -1,6 +1,6 @@
 /* sw.js - Service Worker for offline support */
 
-var CACHE_NAME = 'funschool-v3';
+var CACHE_NAME = 'funschool-v4';
 var FILES = [
     './',
     './index.html',

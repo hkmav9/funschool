@@ -169,10 +169,44 @@ body {
     animation: starPulse 0.4s ease;
 }
 
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Avatar in header — compact size */
+.header .avatar-wrapper {
+    margin-bottom: 0;
+}
+
+.header .avatar {
+    width: 44px;
+    height: 44px;
+    box-shadow: var(--shadow-sm);
+}
+
+.header .avatar-default {
+    font-size: 1.5rem;
+    animation: none;
+}
+
+.header .avatar-badge {
+    width: 18px;
+    height: 18px;
+    font-size: 0.6rem;
+    border-width: 2px;
+}
+
+.header .avatar-ring {
+    inset: -3px;
+    border-width: 2px;
+}
+
 /* ---- Home Screen ---- */
 .greeting {
     text-align: center;
-    padding: 20px 0 30px;
+    padding: 12px 0 20px;
 }
 
 /* Avatar / Welcome Picture */

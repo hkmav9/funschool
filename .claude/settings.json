@@ -10,7 +10,8 @@
       "Bash(npm config:*)",
       "Bash(~/.npm-global/bin/firebase:*)",
       "Bash(chmod:*)",
-      "Bash(/Users/harshakota/GitHub/funschool/styles.css:*)"
+      "Bash(/Users/harshakota/GitHub/funschool/styles.css:*)",
+      "Bash(git remote:*)"
     ],
     "additionalDirectories": [
       "/Users/harshakota"

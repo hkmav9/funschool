@@ -155,6 +155,128 @@
                 feedback: 'The tower stands TALL and STRONG! Biggest at the bottom, smallest at the top — Billy reaches the star! ⭐🎊',
                 sceneState: 'solved'
             }
+        },
+
+        /* ── New Puzzles ─────────────────────────────────────────────── */
+
+        {
+            id: 'pattern',
+            icon: '🔮',
+            title: "Luna's Magic Pattern",
+            teaser: 'A young wizard lost her spell pattern — can you find it?',
+            color: '#9B59B6',
+            picture: renderPatternScene,
+            story: "Luna the apprentice wizard is copying a magic pattern from her spell book, but she accidentally spilled potion on the last symbol! The pattern has to be EXACTLY right or the spell won't work. Can you figure out what shape and color comes next?",
+            attempts: [
+                {
+                    label: '🔵 Blue Circle — the colors repeat!',
+                    result: 'fail',
+                    feedback: "Bzzt! The spell fizzles! The colors DO repeat, but you also need to check the SHAPES. Look more carefully at the full pattern! 💫",
+                    sceneState: 'wrong1'
+                },
+                {
+                    label: '🔺 Red Triangle — the shapes repeat!',
+                    result: 'partial',
+                    feedback: "Closer! The triangle shape is part of the answer, but the color isn't right. Think about BOTH shape AND color! 🤔",
+                    sceneState: 'wrong2'
+                }
+            ],
+            hint: 'Look at the pattern: 🔴🔵🟡 🔴🔵🟡 ... and the shapes: ⭕🔷🔺 ⭕🔷🔺... What comes after 🟡🔺?',
+            solution: {
+                label: '🔴⭕ Red Circle — shape AND color reset!',
+                feedback: 'PERFECT! 🔴⭕ Red Circle! The pattern goes Red→Blue→Yellow and Circle→Diamond→Triangle, both repeating together. Luna\'s spell is saved! ✨🔮',
+                sceneState: 'solved'
+            }
+        },
+
+        {
+            id: 'shadow',
+            icon: '🐘',
+            title: "The Shadow Jungle",
+            teaser: 'Match the mystery shadows to find who is hiding!',
+            color: '#16A085',
+            picture: renderShadowScene,
+            story: "Deep in the jungle, five animals are hiding behind a glowing screen. You can only see their shadows! Safari Scout Priya needs to identify who is hiding in the MIDDLE shadow — the biggest one — to know if it's safe to pass. Can you figure out which animal it is?",
+            attempts: [
+                {
+                    label: '🦒 A giraffe — it\'s very tall!',
+                    result: 'fail',
+                    feedback: "Nope! A giraffe shadow would be taller and thinner with a long neck sticking up. The middle shadow is wide and round. 🦒≠ that shape!",
+                    sceneState: 'giraffe-fail'
+                },
+                {
+                    label: '🦁 A lion — it looks like a cat!',
+                    result: 'partial',
+                    feedback: "A lion is close in size, but the shadow has very big rounded ears and a wider body than a lion. This animal is even bigger... 🤔",
+                    sceneState: 'lion-partial'
+                }
+            ],
+            hint: 'The middle shadow has huge round ears, a very wide body, and what looks like a trunk hanging down. What animal has all of those?',
+            solution: {
+                label: '🐘 An elephant — big ears and a trunk!',
+                feedback: 'YES! 🐘 The big round ears and long trunk are the giveaway! It\'s a friendly elephant! Priya cheers and the elephant waves its trunk hello! 🎉',
+                sceneState: 'solved'
+            }
+        },
+
+        {
+            id: 'number',
+            icon: '🔢',
+            title: "Professor Digit's Number Code",
+            teaser: 'Crack the secret number sequence to open the vault!',
+            color: '#E74C3C',
+            picture: renderNumberScene,
+            story: "Professor Digit keeps all her treasures locked in a vault that opens only when you enter the NEXT number in her secret sequence! She forgot the rule and needs your help. The display shows: 2, 4, 8, 16, __. What number unlocks the vault?",
+            attempts: [
+                {
+                    label: '18 — I added 2 each time!',
+                    result: 'fail',
+                    feedback: "BUZZ! The vault stays locked. 2+2=4 ✓, but 4+2=6 ✗ (not 8). The differences are getting BIGGER each time. Look at the jumps! 📈",
+                    sceneState: 'wrong1'
+                },
+                {
+                    label: '20 — I added 4 each time!',
+                    result: 'partial',
+                    feedback: "Closer! But 2→4 is +2, and 4→8 is +4, and 8→16 is +8. The JUMP itself is doubling each time. What if you try a different operation? 🤔",
+                    sceneState: 'wrong2'
+                }
+            ],
+            hint: 'Instead of adding, try multiplying! What if each number is DOUBLED? 2×2=4, 4×2=8, 8×2=16, 16×2=?',
+            solution: {
+                label: '32 — double each time! (×2)',
+                feedback: 'CLICK! The vault opens! 🎉 2→4→8→16→32. Each number is doubled (×2)! This is called a GEOMETRIC sequence — used in computers and nature! 🔢💡',
+                sceneState: 'solved'
+            }
+        },
+
+        {
+            id: 'bridge',
+            icon: '🌉',
+            title: "Engineer Ella's Bridge Problem",
+            teaser: 'Design a bridge that can hold the heavy supply truck!',
+            color: '#D35400',
+            picture: renderBridgeScene,
+            story: "Engineer Ella needs to build a bridge over a wide gorge so a heavy supply truck can cross safely. She has three designs to choose from, but only ONE will hold the truck's weight without collapsing. Can you figure out which design is strongest?",
+            attempts: [
+                {
+                    label: '📏 A flat plank bridge',
+                    result: 'fail',
+                    feedback: "SNAP! The flat plank cracks right in the middle — flat beams are weak under heavy loads! Real engineers never use flat planks for big bridges. 💥",
+                    sceneState: 'plank-fail'
+                },
+                {
+                    label: '〰️ A rope suspension bridge',
+                    result: 'partial',
+                    feedback: "The rope bridge bounces and sways! It works for people but starts to wobble dangerously under the truck's weight. Suspension works — but needs extra support! 😬",
+                    sceneState: 'rope-partial'
+                }
+            ],
+            hint: 'Look at famous strong bridges — they often use triangles! Triangles are the strongest shape because they can\'t be squished without breaking a side.',
+            solution: {
+                label: '🔺 A triangle truss bridge!',
+                feedback: 'PERFECT! The triangle truss bridge holds firm! Triangles are the STRONGEST shape in engineering — they distribute weight evenly to the ground. Real bridges use this! 🌉🏆',
+                sceneState: 'solved'
+            }
         }
     ];
 
@@ -338,6 +460,59 @@
                 return '<div class="mys-tower-layer' + (isStar ? ' mys-star-layer' : '') + (state === 'solved' && i === 0 ? ' mys-pop' : '') + '">' + l + '</div>';
             }).join('') +
             '</div>';
+    }
+
+    function renderPatternScene(state) {
+        var rows = {
+            default: ['🔴⭕  🔵🔷  🟡🔺', '🔴⭕  🔵🔷  🟡🔺', '🔴⭕  🔵🔷  ❓'],
+            wrong1:  ['🔴⭕  🔵🔷  🟡🔺', '🔴⭕  🔵🔷  🟡🔺', '🔴⭕  🔵🔷  🔵⭕ ✗'],
+            wrong2:  ['🔴⭕  🔵🔷  🟡🔺', '🔴⭕  🔵🔷  🟡🔺', '🔴⭕  🔵🔷  🟡🔺 ...🔺?'],
+            solved:  ['🔴⭕  🔵🔷  🟡🔺', '🔴⭕  🔵🔷  🟡🔺', '🔴⭕  🔵🔷  🟡🔺  🔴⭕✅']
+        };
+        var lines = rows[state] || rows['default'];
+        return '<div class="mys-pattern-wrap">' +
+            lines.map(function (l, i) {
+                return '<div class="mys-pattern-row' + (state === 'solved' && i === 2 ? ' mys-pop' : '') + '">' + l + '</div>';
+            }).join('') +
+            '</div>';
+    }
+
+    function renderShadowScene(state) {
+        var scenes = {
+            default: '<div class="mys-shadow-row"><span class="mys-shadow mys-small">🦊</span><span class="mys-shadow mys-med">❓</span><span class="mys-shadow mys-small">🐆</span></div><div class="mys-scene-row mys-center"><small>Who is the big shadow in the middle?</small></div>',
+            'giraffe-fail': '<div class="mys-shadow-row"><span class="mys-shadow mys-small">🦊</span><span class="mys-shadow mys-med">🦒✗</span><span class="mys-shadow mys-small">🐆</span></div>',
+            'lion-partial': '<div class="mys-shadow-row"><span class="mys-shadow mys-small">🦊</span><span class="mys-shadow mys-med">🦁≈?</span><span class="mys-shadow mys-small">🐆</span></div>',
+            solved: '<div class="mys-shadow-row"><span class="mys-shadow mys-small">🦊</span><span class="mys-shadow mys-med mys-pop">🐘✅</span><span class="mys-shadow mys-small">🐆</span></div><div class="mys-scene-row mys-center"><span class="mys-pop">It\'s an elephant! 🐘🎉</span></div>'
+        };
+        return scenes[state] || scenes['default'];
+    }
+
+    function renderNumberScene(state) {
+        var sequences = {
+            default: { nums: ['2', '4', '8', '16', '?'], colors: ['#9B59B6','#9B59B6','#9B59B6','#9B59B6','#ccc'] },
+            wrong1:  { nums: ['2', '4', '8', '16', '18✗'], colors: ['#9B59B6','#9B59B6','#9B59B6','#9B59B6','#E74C3C'] },
+            wrong2:  { nums: ['2', '4', '8', '16', '20✗'], colors: ['#9B59B6','#9B59B6','#9B59B6','#9B59B6','#E74C3C'] },
+            solved:  { nums: ['2', '4', '8', '16', '32✅'], colors: ['#9B59B6','#9B59B6','#9B59B6','#9B59B6','#27AE60'] }
+        };
+        var seq = sequences[state] || sequences['default'];
+        var html = '<div class="mys-number-row">';
+        seq.nums.forEach(function (n, i) {
+            html += '<div class="mys-num-bubble' + (state === 'solved' && i === 4 ? ' mys-pop' : '') + '" style="background:' + seq.colors[i] + '">' + n + '</div>';
+            if (i < seq.nums.length - 1) html += '<div class="mys-num-arrow">→</div>';
+        });
+        html += '</div>';
+        html += '<div class="mys-scene-row mys-center"><small style="color:var(--text-secondary)">×2 each time</small></div>';
+        return html;
+    }
+
+    function renderBridgeScene(state) {
+        var scenes = {
+            default: '<div class="mys-bridge-wrap"><div class="mys-bridge-gorge">🌊🌊🌊🌊🌊🌊</div><div class="mys-bridge-options"><span>📏 Plank</span><span>〰️ Rope</span><span>🔺 Truss</span></div><div class="mys-scene-row mys-center">🚛 Which holds the truck?</div></div>',
+            'plank-fail': '<div class="mys-bridge-wrap"><div class="mys-bridge-gorge">💥📏💥🌊</div><div class="mys-scene-row mys-center">😱 SNAP! Plank breaks!</div></div>',
+            'rope-partial': '<div class="mys-bridge-wrap"><div class="mys-bridge-gorge">〰️🚛〰️🌊</div><div class="mys-scene-row mys-center">😬 Too wobbly for the truck!</div></div>',
+            solved: '<div class="mys-bridge-wrap"><div class="mys-bridge-gorge" style="position:relative">🔺🔺🔺🚛🔺🔺🔺</div><div class="mys-scene-row mys-center mys-pop">🌉✅ Truss bridge holds firm!</div></div>'
+        };
+        return scenes[state] || scenes['default'];
     }
 
     /* ── Render Router ──────────────────────────────────────────────── */

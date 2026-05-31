@@ -5,7 +5,8 @@
         'Math': '🔢 Math',
         'Science': '🔬 Science',
         'Thinking': '🧠 Thinking',
-        'Geography': '🗺️ Geography'
+        'Geography': '🗺️ Geography',
+        'Creativity': '🎨 Creativity'
     };
 
     /* --- Screen Navigation --- */

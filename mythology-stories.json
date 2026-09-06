@@ -1,0 +1,498 @@
+{
+    "_format": "mythology-stories v1",
+    "_instructions": {
+        "Add a new story": "Copy one story object from the 'stories' array and add it with a unique id.",
+        "Fields": {
+            "id": "Unique string slug",
+            "title": "Chapter title shown on the card",
+            "series": "The saga this chapter belongs to (e.g. 'Ramayana')",
+            "chapter": "Chapter number within the series",
+            "chapterTotal": "Total chapters in the series",
+            "icon": "Single emoji shown on card and reader",
+            "level": "Difficulty 1 (easy) to 3 (hard)",
+            "readingTime": "Estimated read time shown on card (e.g. '20 min')",
+            "story": "Full story text. Use \\n for paragraph breaks.",
+            "moral": "The lesson of the chapter, shown in a highlighted card after the story",
+            "questions": [
+                {
+                    "question": "The question text",
+                    "options": ["Choice A", "Choice B", "Choice C", "Choice D"],
+                    "correct": 0,
+                    "hint": "Optional hint shown below the question (leave empty string to hide)"
+                }
+            ]
+        }
+    },
+    "stories": [
+        {
+            "id": "ramayana-01-birth-of-rama",
+            "title": "The Birth of Prince Rama",
+            "series": "Ramayana",
+            "chapter": 1,
+            "chapterTotal": 10,
+            "icon": "👑",
+            "level": 2,
+            "readingTime": "20 min",
+            "story": "Long ago, in a kingdom called Ayodhya, the golden towers caught the morning sun like torches lit for a festival that never ended. Ayodhya sat on the banks of the river Sarayu, its streets lined with flowering trees, its markets loud with the calls of fruit-sellers and the jingle of temple bells. It was a kingdom where the fields never went hungry and the people never went unheard, because it was ruled by a king who loved his people the way a gardener loves a garden he has tended his whole life.\nThat king was Dasharatha, and though his kingdom overflowed with riches, his palace felt strangely quiet. Dasharatha had three wives who filled his court with warmth and wisdom — Kaushalya, calm as still water; Kaikeyi, sharp and spirited as a hawk; and Sumitra, gentle as evening light. Yet in all his years as king, one wish had never come true. Dasharatha had no children. He would walk the long halls of his palace at night, past painted walls showing the great kings who had come before him, and wonder who would walk those halls after he was gone.\nSo the king called for his royal priest, a wise man named Vasishtha, and asked for help. Vasishtha listened, then smiled the calm smile of someone who has seen many kings worry over many things.\n'There is a sacred fire ceremony,' Vasishtha said, 'old and powerful, called the Putrakameshti Yagna. It is performed to ask the heavens for the gift of children. But it must be done with a pure heart, patience, and care — the fire does not answer those in a hurry.'\nDasharatha did not hesitate. For days, the finest craftsmen in Ayodhya built a great altar in the palace courtyard, its edges carved with lotus flowers and rearing horses. Musicians practiced hymns older than the city itself. Cooks prepared offerings of rice, ghee, and honey, filling the air with a warm, sweet smoke that drifted over the rooftops and out across the river.\nOn the appointed night, Vasishtha lit the sacred fire, and the flames rose taller than any ordinary fire should. The whole court gathered in silence, watching sparks spiral upward like a thousand tiny stars returning home. Dasharatha knelt before the fire with his hands folded, and for the first time in years, he did not feel like a king. He felt like any father who simply wanted a child to love.\nThen, from the heart of the flame, a figure appeared — not burning, but glowing, dressed in gold, holding a golden bowl filled with a shining sweet pudding called kheer.\n'Divine Dasharatha,' the figure said, and his voice seemed to come from everywhere at once, 'the heavens have heard your devotion. Take this kheer and share it among your queens. From it, four sons will be born to you — sons who will bring light to this world the way the sun brings light to the morning.'\nDasharatha's hands trembled as he accepted the bowl. He divided the kheer carefully between his three queens, and within the year, the halls of Ayodhya that had once felt so quiet filled with the sound that every parent longs to hear.\nFirst, Queen Kaushalya gave birth to a baby boy with skin the deep blue-black of a monsoon sky and eyes that seemed to hold a strange, gentle calm even as a newborn. They named him Rama.\nThen Queen Kaikeyi had a son, strong and clear-eyed, whom they named Bharata.\nAnd Queen Sumitra, blessed doubly, gave birth to twin boys — Lakshmana and Shatrughna — who arrived holding tightly to each other's tiny fingers, as if they had already promised never to let go.\nThe city of Ayodhya erupted in celebration. Drums echoed from every temple. Flower petals rained down from balconies. Strangers hugged each other in the streets simply because they were too happy to stand still. Ayodhya, it was said, had waited a long time for its joy, and now that joy had arrived four times over.\nAs the princes grew, it became clear they were not ordinary children. Rama, the eldest, had a stillness about him — he listened more than he spoke, and when he did speak, people found themselves leaning in to hear. Lakshmana followed Rama everywhere, like a shadow that had decided to become a shield instead. Bharata, though raised by the sharp and proud Kaikeyi, grew to love Rama more fiercely than anyone might have expected — the two brothers were rarely seen apart, sharing lessons, meals, and the long afternoons spent by the river skipping stones. Shatrughna, quiet like his twin, watched over them all with a steady, loyal heart.\nDasharatha would often stand at the edge of the training grounds, watching his four sons practice archery under the guidance of the palace teachers, and feel a happiness so large it seemed too big for one chest to hold. He did not yet know that one of these sons — the calm one with the sky-dark skin — was destined for a journey that would test him more than any king had ever been tested. He knew only that his palace, once so silent, now rang with laughter from morning until night, and that this, more than any treasure in his vault, was the true wealth of a king.",
+            "moral": "A wish made with patience, love, and a pure heart is worth waiting for — and the greatest treasures in life are often the people who fill our homes with laughter.",
+            "questions": [
+                {
+                    "question": "Why did King Dasharatha feel unhappy even though his kingdom was rich and peaceful?",
+                    "options": [
+                        "He wanted more gold and land",
+                        "He had no children to one day rule after him",
+                        "His people did not like him",
+                        "His palace was too small"
+                    ],
+                    "correct": 1,
+                    "hint": "Think about what he wondered while walking the halls at night."
+                },
+                {
+                    "question": "What special ceremony did Sage Vasishtha suggest?",
+                    "options": [
+                        "A grand feast for the whole kingdom",
+                        "A journey to a faraway temple",
+                        "A sacred fire ceremony called the Putrakameshti Yagna",
+                        "A tournament of archery"
+                    ],
+                    "correct": 2,
+                    "hint": "It involved a fire, offerings, and great patience."
+                },
+                {
+                    "question": "How many sons were born to King Dasharatha, and what were their names?",
+                    "options": [
+                        "Two sons: Rama and Bharata",
+                        "Four sons: Rama, Bharata, Lakshmana, and Shatrughna",
+                        "Three sons: Rama, Lakshmana, and Shatrughna",
+                        "One son named Rama"
+                    ],
+                    "correct": 1,
+                    "hint": "One queen had twins!"
+                }
+            ]
+        },
+        {
+            "id": "ramayana-02-vishwamitra-quest",
+            "title": "Into the Wild Forest with Sage Vishwamitra",
+            "series": "Ramayana",
+            "chapter": 2,
+            "chapterTotal": 10,
+            "icon": "🏹",
+            "level": 2,
+            "readingTime": "20 min",
+            "story": "Years passed, and the four princes of Ayodhya grew from round-faced babies into sharp-eyed boys, quick with a bow and quicker with a laugh. Rama, the eldest, was barely sixteen summers old when a visitor arrived at the palace gates who would change the quiet rhythm of his life forever.\nThe visitor was Sage Vishwamitra, and the moment he stepped through the golden gates, the guards straightened and the courtiers fell silent. Vishwamitra was no ordinary sage — he had once been a mighty king himself before giving up his crown to seek a deeper kind of power through meditation and discipline. His eyes held the quiet fire of someone who had wrestled with his own anger for years and won. When he walked into King Dasharatha's court, even the flickering torches on the walls seemed to lean toward him, as if listening.\n'King Dasharatha,' Vishwamitra said, his voice steady as a struck bell, 'I have come to ask for your son.'\nDasharatha's heart lurched. 'Which son, wise one, and for what purpose?'\n'I am performing a sacred yajna deep in the forest,' Vishwamitra explained, 'but for many nights, my ceremony has been attacked. Two fearsome demons, Maricha and Subahu, along with their monstrous mother Tataka, delight in ruining sacred rituals. They hurl bones and filth into the sacred fires and terrorize any who try to stop them. I need Rama to come and protect the ceremony.'\nDasharatha's hands trembled — not with anger, but with fear. 'Rama is only a boy,' he said softly. 'He has never faced a true demon. Take my whole army instead, take me, but please, not my son.'\nBut Vishwamitra shook his head slowly. 'It is not soldiers I need, King Dasharatha. Some battles cannot be won with numbers. They can only be won by one who carries no fear and no anger in his heart — only duty. I sense that Rama, young as he is, already carries this. Let him come, and I promise you, he will return to you greater than he left.'\nDasharatha looked to his priest Vasishtha, who nodded gently, and at last, with a heart heavier than any crown, the king agreed. Rama would go — and where Rama went, Lakshmana, ever his shadow and shield, insisted on going too.\nThe two young princes followed Vishwamitra out through the city gates and into the wild green tangle of the forest beyond. The palace, with its polished floors and soft cushions, disappeared behind them, replaced by towering trees whose leaves whispered secrets to the wind, and paths where the only music was birdsong and the distant growl of things unseen.\nAs they walked deeper into the woods, Vishwamitra taught the boys secret chants — powerful words called the Bala and Atibala mantras — that would protect them from hunger, thirst, and fear during their journey. Rama listened carefully, repeating each syllable with the same calm focus he brought to everything, while Lakshmana watched his brother with quiet pride.\nOn the third day, the forest grew darker, the trees older and more twisted, and a foul smell drifted on the wind — the smell of rot and old fires. Vishwamitra stopped walking.\n'This is Tataka's forest,' he said quietly. 'She was once a beautiful spirit, blessed with great strength, but a curse long ago turned her into a demon with a hunger for destruction. She will come soon. Rama, you must not hesitate — even though it may feel strange to raise a bow against something that was once good.'\nAs if summoned by her name, a terrible roar shook the branches, and the demoness Tataka burst from behind an ancient banyan tree. She was massive, her skin the color of an old bruise, her eyes burning red, and she moved with a speed that seemed impossible for something so large. Lakshmana instinctively stepped in front of Rama, his bow already drawn, but Rama gently placed a hand on his brother's shoulder.\n'Wait,' Rama said softly, though his own bow was rising, an arrow already notched. His eyes were calm, but his grip was sure.\nTataka let out a bone-shaking screech and charged, hurling boulders and dust into the air. Rama did not move until the very last moment. Then, with the same steady breath he used for archery practice back home, he loosed a single arrow. It flew true and swift, and Tataka's rampage came to an end, the curse upon her finally broken, her tormented spirit set free at last.\nThe forest fell silent, and for a long moment, nobody spoke. Then Vishwamitra placed a hand on Rama's shoulder. 'You did not act with hatred,' the sage said. 'You acted with duty and courage together. That is a rare and powerful thing. Come — the demons of the yajna still await us, but I believe you are ready.'\nDays later, at the sacred grounds where the ceremony was to be held, the fire was finally lit. As the priests began their chants, a shadow passed over the sky, and Maricha and Subahu swooped down, cackling, ready to hurl filth into the flames as they always did. But this time, two young princes stood guard, bows drawn and steady.\nRama's arrow struck Maricha with such force that the demon was flung far across the sky, landing many miles away, alive but forever fearful of the name Rama. Lakshmana's arrow found its mark on Subahu, ending the demon's reign of terror over the sacred grounds for good.\nThe ceremony was completed without another disturbance, the fire burning bright and undisturbed until dawn. Vishwamitra watched the two young princes with something like wonder in his old eyes.\n'You came to me as boys who had only known the safety of a palace,' he said. 'You leave as protectors — of the innocent, of the sacred, of what is right. Ayodhya does not yet know the treasure it is raising.'\nRama only bowed his head humbly, but Lakshmana, unable to hide his pride, grinned at his brother the whole walk back through the darkening trees.",
+            "moral": "True courage is not about anger or hunger for a fight — it is about calmly standing up to protect others, even when it feels frightening or unfamiliar.",
+            "questions": [
+                {
+                    "question": "Why did Sage Vishwamitra come to King Dasharatha's palace?",
+                    "options": [
+                        "To ask for gold to rebuild a temple",
+                        "To ask for Rama's help protecting his sacred ceremony from demons",
+                        "To invite the princes to a wedding",
+                        "To warn the king about an invading army"
+                    ],
+                    "correct": 1,
+                    "hint": "His yajna was being attacked night after night."
+                },
+                {
+                    "question": "How did Rama defeat the demoness Tataka?",
+                    "options": [
+                        "He ran away from her",
+                        "He tricked her into a trap",
+                        "He calmly aimed and released a single arrow after waiting for the right moment",
+                        "Lakshmana defeated her alone"
+                    ],
+                    "correct": 2,
+                    "hint": "Rama did not act out of fear or anger — he waited, calm and steady."
+                },
+                {
+                    "question": "What did Sage Vishwamitra mean when he said Rama and Lakshmana 'leave as protectors'?",
+                    "options": [
+                        "They had learned to protect only themselves",
+                        "They had grown from sheltered boys into brave defenders of others",
+                        "They were now allowed to rule the forest",
+                        "They no longer needed to listen to their father"
+                    ],
+                    "correct": 1,
+                    "hint": "Think about how the princes changed during their journey through the forest."
+                }
+            ]
+        },
+        {
+            "id": "ramayana-03-breaking-the-bow",
+            "title": "The Bow That Only One Could Bend",
+            "series": "Ramayana",
+            "chapter": 3,
+            "chapterTotal": 10,
+            "icon": "💍",
+            "level": 2,
+            "readingTime": "20 min",
+            "story": "With the forest ceremony safely completed, Sage Vishwamitra did not lead the princes straight home. Instead, he turned their path toward the kingdom of Mithila, a city famous not for its armies or its towers, but for something far stranger: an enormous, ancient bow that no living person had ever managed to lift.\n'The king of Mithila is Janaka,' Vishwamitra explained as they walked, 'a ruler as wise as any sage, though he wears a crown instead of simple robes. Long ago, the god Shiva himself gave this kingdom a mighty bow as a gift. It is so heavy that it takes hundreds of strong men just to wheel it into a hall on an iron cart. King Janaka has declared that whoever can string this bow shall marry his daughter, Princess Sita.'\n'And no one has ever done it?' Lakshmana asked, eyebrows raised.\n'Many have tried,' Vishwamitra said. 'Kings, princes, and warriors from every corner of the land have come, strained with all their might, and failed. Some could not even make the bow shift an inch.'\nRama listened quietly, more curious about the princess than the bow. He had heard whispers about Sita even in Ayodhya — that she had not been born in an ordinary way, but had been found as a baby by King Janaka himself, lying peacefully in a furrow of earth while he ploughed his fields for a sacred ceremony. It was said the earth itself had offered her up as a gift, and so she had been named Sita, which means 'furrow.' Some said she had a quiet strength in her that matched the earth she came from — gentle on the surface, but unshakable underneath.\nWhen they arrived in Mithila, the city was more crowded and colorful than Rama had ever seen. Banners in every shade of the sunset hung from every rooftop, and the streets buzzed with visiting kings, curious travelers, and hopeful suitors, all gathered for one final attempt at the bow.\nKing Janaka welcomed Vishwamitra and the two young princes with deep respect, though a flicker of doubt crossed his face when he saw how young Rama looked. 'Sage,' Janaka said carefully, 'this contest has broken the pride of grown warriors. Are you certain this is wise?'\n'Watch,' Vishwamitra said simply, 'and then decide.'\nThe great hall of Mithila was the largest Rama had ever stood in, its ceiling so high that torches seemed like distant stars. In the center of the hall sat the bow, resting on its iron cart — a weapon so ancient and enormous that it looked less like a tool and more like a sleeping creature made of dark, gleaming wood and old, cold metal.\nOne by one, the assembled kings and princes stepped forward, rolling up their sleeves, cracking their knuckles, muttering prayers under their breath. Each one gripped the bow, planted their feet, and pulled with every ounce of strength they had. And one by one, they failed — some couldn't budge it at all, some managed only to tilt it slightly before stumbling backward, red-faced and humbled, to the murmuring crowd.\nAt the edge of the hall, hidden partly behind a carved pillar so she could watch without being seen by the crowd, stood Princess Sita. She had watched dozens of suitors fail with the same calm patience she brought to everything, neither hopeful nor disappointed, simply waiting to see what the day would bring. When Rama was finally called forward — the last name on the list, added almost as an afterthought because Vishwamitra had insisted — Sita's breath caught, though she could not have said exactly why.\nRama stepped up to the bow without hurry, without any of the dramatic knuckle-cracking the other suitors had shown. He simply looked at the bow for a moment, the way he might study a difficult but familiar puzzle, then bowed his head briefly to King Janaka and to the bow itself, as if greeting an old and respected elder.\nThen he bent down, gripped the bow, and lifted it as if it weighed no more than a walking stick.\nA gasp rippled through the hall.\nRama planted one end against the ground and began to string the bow, pulling the ancient wood into its proper curve with the same calm, practiced motion he had once used to fell the demoness Tataka in Vishwamitra's forest. The bow groaned, protesting centuries of stillness — and then, with a crack that echoed like thunder through the great hall, it snapped in two.\nFor one heartbeat, silence. Then the hall erupted — cheers, gasps, shouts of astonishment, kings turning to each other in disbelief. King Janaka rose from his throne, tears of joy shining in his eyes, and hurried forward himself to embrace the young prince who had accomplished what warriors twice his age could not.\nBehind the pillar, Sita allowed herself, at last, a small and radiant smile.\n'You have done what the greatest warriors of this age could not,' King Janaka said, his voice thick with emotion. 'You have earned the hand of my daughter, Sita — but more than that, young prince, I believe the earth itself has been waiting for this moment.'\nMessengers were sent racing to Ayodhya, and within days, King Dasharatha arrived with his whole court, overjoyed beyond words to see his son not only safe, but soon to be married. The wedding that followed was unlike anything either kingdom had seen — streets filled with flower petals thick as snow, musicians playing from dawn until the stars came out, and two kingdoms joined not just by a broken bow, but by the quiet, steady bond growing between Rama and Sita, who from their very first meeting seemed to understand each other without needing many words at all.\nAs the wedding fires burned and the priests chanted ancient blessings, Rama looked at Sita and saw in her eyes the same calm strength Vishwamitra had once seen in him — two people who did not need to prove their worth loudly, because it showed clearly in everything they did.",
+            "moral": "True strength does not need to boast or show off — it reveals itself quietly, through calm confidence and right action, not through noise.",
+            "questions": [
+                {
+                    "question": "What was special about the bow in King Janaka's kingdom?",
+                    "options": [
+                        "It was made entirely of gold",
+                        "It was so heavy that no one had ever been able to string it",
+                        "It could shoot arrows on its own",
+                        "It belonged to King Dasharatha"
+                    ],
+                    "correct": 1,
+                    "hint": "Hundreds of men were needed just to move it on its cart."
+                },
+                {
+                    "question": "How was Princess Sita found as a baby?",
+                    "options": [
+                        "She was born in the palace like any princess",
+                        "She was found in a furrow of earth while King Janaka was ploughing a field",
+                        "She arrived floating down a river",
+                        "She was brought by a traveling merchant"
+                    ],
+                    "correct": 1,
+                    "hint": "Her name, Sita, actually means 'furrow.'"
+                },
+                {
+                    "question": "What did Rama do differently from the other suitors before lifting the bow?",
+                    "options": [
+                        "He asked for a smaller, lighter bow instead",
+                        "He calmly studied the bow and bowed respectfully before lifting it",
+                        "He challenged King Janaka to lift it first",
+                        "He refused to try at all"
+                    ],
+                    "correct": 1,
+                    "hint": "The other suitors cracked their knuckles and strained loudly — Rama approached it calmly."
+                }
+            ]
+        },
+        {
+            "id": "ramayana-04-promise-and-exile",
+            "title": "A Promise Kept, A Kingdom Shared",
+            "series": "Ramayana",
+            "chapter": 4,
+            "chapterTotal": 10,
+            "icon": "🥿",
+            "level": 2,
+            "readingTime": "20 min",
+            "story": "Years of peace followed the wedding, and Ayodhya thrived under the watchful eye of an aging King Dasharatha, who had grown tired and gray but never stopped smiling whenever Rama and Sita walked through the palace gardens together. As Dasharatha felt his strength fading, he made a decision that filled the whole kingdom with joy: it was time for Rama to be crowned as the next king.\nThe news spread through Ayodhya like sunlight breaking through clouds. Merchants strung garlands across the marketplace. Children practiced the songs they would sing at the coronation. Even the animals in the royal stables seemed to sense the excitement, prancing and nickering as decorators wound flowers through their manes.\nBut in one quiet corner of the palace, a poisonous seed of doubt was being planted.\nQueen Kaikeyi, Bharata's mother, had once been Dasharatha's favorite among his queens, sharp-witted and beloved. But she had a servant named Manthara, a hunchbacked woman whose heart had grown twisted with envy over the years. When Manthara heard the news of Rama's coronation, she hurried to Kaikeyi's chambers, her face pinched with false concern.\n'Have you heard, my queen?' Manthara hissed. 'Rama is to be crowned king. And where will that leave your son, Bharata? Cast aside, forgotten, while Kaushalya's son rules over everything.'\nKaikeyi, who genuinely loved Rama as her own son, waved the words away at first. 'Rama will be a wonderful king, Manthara. He loves Bharata as a brother. This is good news.'\nBut Manthara did not stop. Day after day, whisper after whisper, she poured doubt into Kaikeyi's ears like slow poison into a well, until even a kind heart began to twist with fear and jealousy. Manthara reminded Kaikeyi of an old promise — many years ago, Dasharatha had been gravely wounded in a great battle, and Kaikeyi had nursed him back to health with her own hands. In gratitude, the king had granted her two wishes, or boons, to be used whenever she chose.\n'Use them now,' Manthara urged. 'Ask that Bharata be crowned king instead, and that Rama be exiled to the forest for fourteen years.'\nAt last, worn down by fear for her son's future, Kaikeyi agreed.\nWhen Dasharatha came to her chambers that evening, glowing with happiness about the next day's coronation, he found Kaikeyi lying on the floor of her chamber, her hair undone, refusing to look at him.\n'What troubles you, my queen?' he asked gently, kneeling beside her. 'Ask anything, and it is yours.'\n'I ask for the two boons you once promised me,' Kaikeyi said, her voice trembling — whether from guilt or determination, even she could not have said. 'Crown Bharata as king tomorrow instead of Rama. And send Rama into exile in the forest for fourteen years.'\nThe color drained from Dasharatha's face. He begged, he pleaded, he wept — something a king was never supposed to do — but Kaikeyi would not release him from his word, for a king's promise, once given, could never be broken without shattering everything he stood for.\nWhen Rama was told the news the next morning, the whole court expected him to weep, or argue, or refuse. Instead, Rama simply bowed his head.\n'If Father has given his word,' Rama said calmly, 'then I will honor it. A promise is a promise, and I would rather live in a forest with an honest heart than in a palace built on a broken vow.'\nSita, upon hearing that her husband would leave for the forest, did not hesitate for even a moment. 'Wherever you go, I go,' she said simply. 'A forest with you is more of a home to me than any palace without you.'\nLakshmana, too, refused to be left behind. 'You are my brother and my king,' he told Rama fiercely. 'Let me carry your bow, guard your sleep, and share your exile. I will not stay behind in comfort while you face hardship alone.'\nAnd so, on what should have been the happiest day of his life, Rama removed his royal silks, put on simple robes made of tree bark, and walked out of the golden gates of Ayodhya with only his wife and his brother beside him, while the entire city wept in the streets, unable to understand how such sorrow could follow such joy.\nKing Dasharatha, heartbroken beyond words, did not survive the grief of watching his beloved son leave. He passed away only days later, calling Rama's name with his final breath.\nWhen the news reached Bharata, who had been away visiting relatives during all of this, he returned to Ayodhya not with celebration, but with horror. He had never wanted his mother's scheme, and he refused, absolutely, to sit on a throne stolen through trickery and sorrow.\nBharata journeyed deep into the forest, following rumors and footprints for days, until he finally found Rama living simply in a small hut of leaves and branches. Bharata fell to his knees before his brother, weeping.\n'Please, brother, come home,' Bharata begged. 'The throne is yours. I want no part of what my mother has done.'\nBut Rama, gently lifting his brother up, shook his head. 'Father's word cannot be undone, Bharata, even in grief. I must complete fourteen years in the forest. But you — you are needed in Ayodhya. Rule in my place, not as king, but as my brother caring for our people until I return.'\nBharata argued, pleaded, and wept, but Rama's calm resolve did not waver. Finally, Bharata made a request of his own.\n'Then give me your sandals,' Bharata said. 'I will place them upon the throne and rule only as your servant, in your name, until the day you return. Every decision I make, I will make as if you yourself were sitting there.'\nRama, moved by his brother's devotion, agreed. And so, for the next fourteen years, Bharata ruled Ayodhya not from the throne itself, but from a small mat placed beside it, while Rama's sandals rested upon the golden seat — a kingdom governed not by power, but by love and loyalty, waiting patiently for its true king to return.",
+            "moral": "Keeping a promise, even when it costs us dearly, and loving our family enough to put their needs before our own pride, are the truest signs of strength.",
+            "questions": [
+                {
+                    "question": "Why did Queen Kaikeyi ask King Dasharatha for her two boons?",
+                    "options": [
+                        "Because she genuinely hated Rama",
+                        "Because Manthara filled her with fear and jealousy about her son Bharata's future",
+                        "Because she wanted to travel to another kingdom",
+                        "Because Rama had wronged her"
+                    ],
+                    "correct": 1,
+                    "hint": "Manthara whispered doubts to Kaikeyi day after day."
+                },
+                {
+                    "question": "How did Rama react when he learned he would be exiled instead of crowned king?",
+                    "options": [
+                        "He argued angrily with his father",
+                        "He calmly accepted it, saying a promise should be honored",
+                        "He refused to leave the palace",
+                        "He asked Lakshmana to fight for the throne"
+                    ],
+                    "correct": 1,
+                    "hint": "Rama valued his father's word above his own comfort."
+                },
+                {
+                    "question": "What did Bharata do instead of ruling as king while Rama was in exile?",
+                    "options": [
+                        "He crowned himself king permanently",
+                        "He placed Rama's sandals on the throne and ruled in his brother's name",
+                        "He left Ayodhya and never returned",
+                        "He asked Lakshmana to rule instead"
+                    ],
+                    "correct": 1,
+                    "hint": "Bharata refused to take a throne he felt belonged to his brother."
+                }
+            ]
+        },
+        {
+            "id": "ramayana-05-golden-deer",
+            "title": "The Golden Deer's Trick",
+            "series": "Ramayana",
+            "chapter": 5,
+            "chapterTotal": 10,
+            "icon": "🦌",
+            "level": 3,
+            "readingTime": "20 min",
+            "story": "Rama, Sita, and Lakshmana settled into a simple but peaceful life in a part of the forest called Panchavati, where Lakshmana built a cozy hut of woven leaves and sturdy bamboo beside a clear, singing stream. Days passed gently — Rama and Lakshmana hunted and studied the ways of the forest, while Sita tended a small garden of flowers outside their hut, humming softly to herself as she worked. For a while, exile almost felt less like punishment and more like a strange, quiet adventure the three of them shared together.\nBut peace, as it often does, drew unwanted attention.\nOne afternoon, a rakshasi — a demoness — named Surpanakha wandered through Panchavati and spotted Rama sitting outside his hut, mending an arrow. She was captivated at once by his calm strength, and using her magical powers, she transformed herself into a beautiful woman and approached him, declaring her love and asking him to marry her instead of Sita.\nRama, ever gentle even in refusal, smiled kindly. 'I am devoted only to Sita,' he said, 'but my brother Lakshmana is unmarried. Perhaps you should ask him.'\nLakshmana, understanding Rama's intention to gently redirect her without cruelty, played along with a teasing smile. 'I am merely Rama's servant,' he said. 'You wouldn't want a servant when you could have a prince. Ask Rama again.'\nBack and forth they went, never unkind, simply trying to send her away without anger. But Surpanakha, growing frustrated and humiliated by what she saw as mockery, dropped her beautiful disguise entirely, revealing her true demonic form, and lunged furiously at Sita, believing her to be the obstacle standing between herself and Rama.\nLakshmana moved instantly, placing himself between the demoness and Sita, and in the scuffle that followed, he struck out and cut off the tip of Surpanakha's nose. Shrieking in pain and fury, she fled the forest, blood streaming down her face, vowing revenge with every furious step.\nShe ran straight to her powerful brothers, the demon warriors Khara and Dushana, twisting the story to make herself the innocent victim. Enraged on her behalf, the brothers gathered an army of fourteen thousand rakshasa warriors and marched on Panchavati to destroy Rama and Lakshmana.\nBut Rama, standing calmly before the enormous army with nothing but his bow, fought with such focused skill that, arrow by arrow, he defeated the entire force single-handedly, including Khara and Dushana themselves. It was a battle that would be spoken of for generations — one prince, unwavering, against fourteen thousand.\nHumiliated and grieving, Surpanakha fled once more, this time all the way to the island kingdom of Lanka, ruled by her older brother — the mighty and terrifying demon king, Ravana. Ravana had ten heads, twenty arms, and a hunger for power so vast it had never once been satisfied. He had earned his terrible strength through years of devoted worship and discipline, but instead of using that strength for good, he had let pride and greed twist his heart.\nSurpanakha, nursing both her wound and her wounded pride, did not simply tell Ravana what had happened. She described Sita's beauty in such glowing, exaggerated detail that a dangerous idea began to bloom in Ravana's mind — if he could not have Sita through honesty, perhaps he could take her through trickery.\nRavana sought out Maricha, the very demon Rama had once flung across the sky as a boy protecting Vishwamitra's sacred fire. Maricha, remembering that painful lesson well, begged Ravana to abandon the idea.\n'I have felt Rama's arrow myself,' Maricha warned. 'He is no ordinary man. This plan will end in your destruction, not your victory.'\nBut Ravana, blinded by pride and desire, threatened Maricha until the frightened demon reluctantly agreed to help.\nBack in Panchavati, one golden afternoon, Sita was tending her garden when a shimmering deer stepped delicately out from between the trees. Its coat glimmered like liquid sunlight, its antlers sparkled as if dusted with stardust, and its eyes held an odd, unnatural gleam. It was, of course, Maricha in disguise.\nEnchanted, Sita called out to Rama. 'Look! I have never seen anything so beautiful. Please, catch it for me — I would love to keep it as a pet.'\nRama, sensing something faintly unusual about the creature but not wanting to disappoint Sita, agreed to pursue it, instructing Lakshmana firmly to stay behind and guard Sita no matter what happened.\nThe deer led Rama deep into the forest, always staying just out of reach, drawing him farther and farther from the hut. Finally, growing certain something was wrong, Rama drew his bow and released an arrow. As the arrow struck true, the deer's disguise shattered, and Maricha, in his final moments, cried out in a perfect imitation of Rama's own voice: 'Lakshmana! Sita! Help me!'\nThe cry echoed through the trees and reached the hut, where Sita, terrified for Rama's life, begged Lakshmana to go help him. Lakshmana, who recognized the trick for what it likely was — Rama's voice was far too skilled to be caught off guard so easily — hesitated.\n'Rama asked me to guard you no matter what,' Lakshmana said. 'That cry is surely some trick.'\nBut Sita, overwhelmed with fear and, in her panic, saying words she would later deeply regret, accused Lakshmana of secretly wishing harm to come to Rama so that he might have her for himself. The accusation cut Lakshmana deeply. Torn and heartbroken, he finally relented, but before leaving, he drew a protective line across the threshold of the hut with the tip of his arrow.\n'This line will protect you,' he told her. 'Please, whatever happens, do not cross it.'\nThe moment Lakshmana disappeared into the trees, an old, frail-looking hermit approached the hut, asking politely for food and water, as any traveler might. It was Ravana in disguise. Sita, following the sacred custom of never turning away someone asking for help, offered him food from just inside the protective line, but the hermit insisted she step outside to properly serve him.\nThe instant Sita's foot crossed the line, Ravana's disguise fell away, revealing his true monstrous form. Before Sita could even scream, he seized her and carried her to his flying chariot, rising into the sky.\nAn old vulture named Jatayu, a loyal friend of King Dasharatha's from years past, saw the commotion from his nest and flew fiercely at Ravana, fighting with every last ounce of his aging strength to save the princess. He tore at the chariot and clawed at Ravana himself, but Ravana, furious, sliced off the old vulture's wings with his sword, sending Jatayu crashing to the earth below, mortally wounded.\nWhen Rama and Lakshmana returned to the hut — Rama having realized the deer's cry was indeed a trick, just as Lakshmana had feared — they found it empty, the protective line broken, Sita gone.\nThey found Jatayu instead, barely breathing, in a clearing not far away. With his final breaths, the brave old vulture told them everything — that Ravana had taken Sita, flying south, toward the sea.\nRama held the dying bird gently, tears finally falling from eyes that had remained calm through demons, exile, and every hardship before this moment. 'You gave your life trying to save her,' Rama whispered. 'That is a debt I will carry forever.'\nAs Jatayu's spirit passed peacefully, Rama rose to his feet, his sorrow hardening into quiet, unshakable resolve. Sita was gone, but he would not rest until he found her.",
+            "moral": "Not everything that glitters is truly good, and fear can make us say things we don't mean — but true love and loyalty forgive, and true courage keeps searching even when all seems lost.",
+            "questions": [
+                {
+                    "question": "Why did Surpanakha attack Sita in the forest?",
+                    "options": [
+                        "Sita had insulted her",
+                        "She wanted Rama for herself and saw Sita as the obstacle",
+                        "Sita had taken something that belonged to her",
+                        "She was hungry and wanted Sita's food"
+                    ],
+                    "correct": 1,
+                    "hint": "She had just tried, and failed, to win Rama's affection."
+                },
+                {
+                    "question": "Why did Lakshmana finally leave Sita alone at the hut, even though he was told to guard her?",
+                    "options": [
+                        "He wanted to explore the forest",
+                        "Sita's fear and painful accusation convinced him to go check on Rama",
+                        "He heard Ravana calling his name",
+                        "He was tricked by the golden deer himself"
+                    ],
+                    "correct": 1,
+                    "hint": "Sita said something in her panic that deeply hurt him."
+                },
+                {
+                    "question": "What lesson can we learn from Jatayu the vulture's final act?",
+                    "options": [
+                        "It is safer to avoid danger and stay out of other people's problems",
+                        "Even at great personal cost, standing up to protect someone in danger is a noble and brave act",
+                        "Old age means you should no longer try to help others",
+                        "Fighting is always the best solution to every problem"
+                    ],
+                    "correct": 1,
+                    "hint": "Jatayu was old and knew he might not win, yet he still tried to save Sita."
+                }
+            ]
+        },
+        {
+            "id": "ramayana-06-hanuman-friendship",
+            "title": "A Friendship Sealed in the Forest",
+            "series": "Ramayana",
+            "chapter": 6,
+            "chapterTotal": 10,
+            "icon": "🐒",
+            "level": 3,
+            "readingTime": "20 min",
+            "story": "Grief-stricken but determined, Rama and Lakshmana journeyed south through unfamiliar wilderness, following the direction Jatayu had given with his final breath. They crossed rivers, climbed rocky hills, and pushed through tangled thickets, driven by a single purpose: finding Sita.\nTheir path eventually led them to the base of a mountain called Rishyamukha, where they noticed something strange — a group of monkey-like figures watching them cautiously from a distance, clearly frightened, yet unable to look away.\nThese were vanaras, a race of intelligent, monkey-like beings who lived in the forests and mountains of that region, capable of speech, strategy, and remarkable loyalty. Their king, Sugriva, was hiding on Rishyamukha in fear of his own older brother, Vali, who had once been Sugriva's closest companion but had turned against him after a terrible misunderstanding.\nYears earlier, Vali and Sugriva had ruled together over the vanara kingdom of Kishkindha in perfect brotherhood, until Vali went to fight a demon inside a deep cave and did not return for so long that Sugriva, believing his brother had died, sealed the cave entrance to protect the kingdom and reluctantly took the throne himself. But Vali had not died — he emerged from the cave alive, only to find the entrance blocked and, in his fury, assumed Sugriva had trapped him on purpose to steal his kingdom. Refusing to hear any explanation, Vali drove Sugriva into exile, even taking Sugriva's wife for himself in his anger, and swore to kill his younger brother on sight.\nNow Sugriva lived in constant fear on Rishyamukha mountain, protected only because Vali had once been cursed by a sage never to set foot on that particular peak.\nWhen Sugriva's most trusted minister, a clever and powerful vanara named Hanuman, spotted the two armed strangers approaching, he was sent to investigate, disguised as a humble wandering monk so as not to provoke a confrontation.\nHanuman approached Rama and Lakshmana with careful, respectful words, and something remarkable happened the moment Rama began to speak. Hanuman, ordinarily sharp and cautious, felt an overwhelming sense of devotion rise in his heart — a feeling he could not fully explain, as though he had been waiting his whole life to meet exactly this person. He revealed his true form and identity at once, kneeling before Rama.\n'Great prince,' Hanuman said, 'I sense in you a purpose greater than any I have witnessed. Please, tell me your story, and let me help however I can.'\nRama, sensing the same genuine warmth in Hanuman, told him everything — his exile, Sita's kidnapping, and Jatayu's final sacrifice. Hanuman listened with his whole heart, and by the time Rama finished speaking, Hanuman had already decided that his own strength, cleverness, and loyalty belonged entirely to this cause.\nHanuman carried Rama and Lakshmana on his own shoulders up the mountain to meet Sugriva, and the vanara king listened to their story with growing hope. 'Prince Rama,' Sugriva said, 'I too have lost someone I love — my wife, taken by my own brother, and my kingdom besides. If you help me reclaim what is mine, I promise you every vanara under my command will search the earth to find your Sita.'\nA bond of friendship formed instantly between the two — both men had been wronged, both had lost what they loved most, and both understood, in that shared sorrow, exactly what the other needed.\nSugriva warned Rama that Vali was nearly unbeatable in single combat, having received a boon that transferred half of any opponent's strength to himself during a fight. Rama devised a plan: Sugriva would challenge Vali to a duel, and Rama would help from a hidden position among the trees, ensuring fairness against an opponent whose very strength made honest combat impossible.\nWhen the two brothers finally clashed in the fighting arena of Kishkindha, Rama watched carefully from behind a large tree, and at the right moment, released a single arrow that struck Vali down. As Vali lay dying, he questioned Rama's actions from hiding, and Rama explained gently but firmly that he had acted to correct a great injustice — a brother wronged, a wife stolen, a kingdom denied to its rightful ally — restoring balance where cruelty had taken hold. Vali, in his final moments, came to understand and even respect the reasoning, passing his kingdom peacefully to his own son before entrusting Sugriva's restoration.\nSugriva was crowned king of Kishkindha once more, reunited with his family and his throne. True to his word, he summoned vast armies of vanaras from every corner of the land and sent them out in all directions — north, south, east, and west — with a single mission: find Sita, wherever in the world she might be.\nAmong all the search parties, it was the group heading south, led by Hanuman himself, that would prove most important of all. For it was in the south, across a vast and churning sea, that Sita was being held captive on the island of Lanka — and it would take a leap of extraordinary courage to reach her.",
+            "moral": "Shared sorrow can build the strongest friendships, and true loyalty means standing by someone even when the road ahead looks impossible.",
+            "questions": [
+                {
+                    "question": "Why was Sugriva hiding on Rishyamukha mountain?",
+                    "options": [
+                        "He was afraid of Ravana",
+                        "He was hiding from his brother Vali, who wanted to kill him over a misunderstanding",
+                        "He was training for a great battle",
+                        "He was searching for Sita on his own"
+                    ],
+                    "correct": 1,
+                    "hint": "Vali believed Sugriva had trapped him inside a cave on purpose."
+                },
+                {
+                    "question": "What made Hanuman decide to help Rama so completely?",
+                    "options": [
+                        "Rama offered him gold and treasure",
+                        "He felt an immediate, deep sense of devotion and connection upon meeting Rama",
+                        "Sugriva ordered him to do it",
+                        "He wanted to become a prince himself"
+                    ],
+                    "correct": 1,
+                    "hint": "Hanuman knelt before Rama the moment they truly spoke."
+                },
+                {
+                    "question": "Why did Rama help Sugriva defeat his brother Vali?",
+                    "options": [
+                        "Because Vali had attacked Rama first",
+                        "To correct the injustice done to Sugriva and gain an ally to help find Sita",
+                        "Because Vali refused to share his kingdom's gold",
+                        "Rama did not actually help Sugriva at all"
+                    ],
+                    "correct": 1,
+                    "hint": "Sugriva promised his entire army would search for Sita in return."
+                }
+            ]
+        },
+        {
+            "id": "ramayana-07-hanuman-leap",
+            "title": "Hanuman's Leap Across the Sea",
+            "series": "Ramayana",
+            "chapter": 7,
+            "chapterTotal": 10,
+            "icon": "🌊",
+            "level": 3,
+            "readingTime": "20 min",
+            "story": "The vanara search party led by Hanuman traveled south for many days, climbing over rocky cliffs and pushing through dense jungles, until at last the land ran out entirely, giving way to an enormous, restless sea that stretched to the horizon in every direction. Somewhere beyond that endless blue water lay the island kingdom of Lanka, and somewhere within Lanka, they hoped, was Sita.\nThe vanaras stood at the shore, staring at the impossible distance ahead, their earlier determination faltering into despair. 'No one can cross such a sea,' one of them murmured. 'We have failed before we have even begun.'\nIt was then that they encountered Sampati, an enormous, elderly eagle-like bird living alone on a cliffside — and, remarkably, the older brother of Jatayu, the very vulture who had died protecting Sita. When Sampati learned of his brother's brave death, grief and pride mixed in his ancient heart, and he offered them what help he could.\n'My eyes, though old, can still see farther than any creature alive,' Sampati said. 'I can see across this entire sea, to the island of Lanka itself. And yes — I can see a woman there, golden-skinned and sorrowful, held within a grove guarded by demons. That must be your Sita.'\nHope flared again among the vanaras, but the problem remained — the sea itself was simply too vast for any of them to cross. One by one, the strongest among them tried to estimate how far they might leap, and one by one, their confidence crumbled — until Jambavan, an old and wise bear who had lived through many ages, turned to Hanuman.\n'Hanuman,' Jambavan said gently, 'do you not remember who you truly are?'\nHanuman blinked, confused. Jambavan explained a truth that had been forgotten, even by Hanuman himself, hidden away by an old curse from his mischievous childhood — Hanuman was the son of the wind god, Vayu, blessed since birth with the power to fly, to grow to enormous size, and to shrink smaller than a mouse, strength that rivaled the mightiest beings in creation. As a curious child, he had once tried to swallow the sun itself, mistaking it for a fruit, and the resulting chaos had led the gods to place a gentle curse on him, causing him to forget his own extraordinary abilities until the moment someone reminded him of who he truly was.\nAs Jambavan spoke, Hanuman felt something awaken deep within him — a memory of power long dormant, rising like a tide. He rose to his feet, and before the astonished eyes of the entire search party, he began to grow. Taller and taller he stretched, his shoulders broadening, his presence filling the sky, until he stood as tall as the mountain behind them, glowing faintly with golden light.\n'I will bring back news of Sita,' Hanuman declared, his voice now rolling like distant thunder, 'or I will not return at all.'\nWith a mighty leap that shook the very cliffside beneath his feet, Hanuman launched himself into the sky, soaring out over the endless, glittering sea. The wind sang past him as he flew, and far below, dolphins and great sea creatures paused in their swimming, tilting their heads upward to watch the giant, golden figure streaking across the sky like a comet.\nPartway across, a mountain suddenly rose from the ocean floor before him, offering itself as a resting place — for it was Mainaka, a mountain that owed a debt of gratitude to Hanuman's father, the wind god, for once saving it from destruction. But Hanuman, determined and focused, only touched the mountain briefly out of respect before continuing onward, unwilling to rest until his mission was complete.\nA sea demoness named Surasa then rose from the waves to test him, opening her enormous mouth and demanding he enter it as a display of respect to the ocean's creatures. Thinking quickly, Hanuman shrank himself down to the size of a thumb, darted swiftly into her mouth and back out again before she could close it, satisfying the ancient test through cleverness rather than force, and continued his journey with barely a pause.\nFinally, after crossing the vast, churning ocean, Hanuman spotted land ahead — the golden towers and dark forests of Lanka rising from the waves. He shrank himself down to a size small enough to avoid notice and crept silently onto the island, moving from shadow to shadow past patrolling demon guards, searching through the strange and beautiful, yet menacing, kingdom for any sign of Sita.\nHe found her at last in a grove called Ashoka Vatika, sitting beneath a great tree, surrounded by fierce demoness guards, her clothes worn and simple, her face etched with sorrow but her posture still dignified and unbroken, like a queen even in captivity. Ravana had visited her many times, offering riches and threats in equal measure, trying to convince her to become his wife, but Sita had refused every single time, her devotion to Rama unshaken despite months of fear and loneliness.\nWaiting until the demoness guards had drifted into an uneasy sleep, Hanuman crept closer and, from a hidden branch above, quietly dropped Rama's own signet ring into Sita's lap.\nSita gasped, snatching up the ring with trembling hands, recognizing it instantly. She looked up, and Hanuman revealed himself, small and unassuming, perched respectfully on the branch above.\n'I come from Prince Rama,' Hanuman whispered. 'He has not stopped searching for you for even a single day. He sent me to find you, and I have found you at last.'\nTears of relief and joy streamed down Sita's face as Hanuman told her everything — Rama's grief, his alliance with Sugriva, the great search that had spanned every corner of the earth to find her. In return, Sita gave Hanuman a piece of jewelry from her hair, a chudamani, to carry back as proof that he had truly found her.\n'Tell him,' Sita said softly, 'that my heart has never once wavered, and that I will wait for him no matter how long it takes.'\nBefore leaving, Hanuman, feeling a surge of mischief mixed with righteous anger at Ravana's cruelty, allowed himself to be captured by the palace guards, and when Ravana, in fury, ordered Hanuman's tail set on fire as punishment, Hanuman used his shrinking and growing powers to escape his bonds and, with his burning tail, leapt from rooftop to rooftop, setting much of Ravana's golden city ablaze before finally launching himself back across the sea toward his waiting friends, the flames trailing behind him like a comet's tail against the darkening sky.\nWhen Hanuman finally landed back among the vanaras, exhausted but triumphant, he held up the shining chudamani for all to see. 'I have found her,' he announced, and the entire company erupted into joyous celebration, for now, at last, they knew exactly where Sita was — and exactly where their next great journey would lead them.",
+            "moral": "We often forget our own strength until someone who believes in us reminds us of who we truly are — and courage grows even bigger once we remember it.",
+            "questions": [
+                {
+                    "question": "How did Hanuman remember his true powers of flight and immense strength?",
+                    "options": [
+                        "He read about them in an ancient scroll",
+                        "Jambavan the wise bear reminded him of who he truly was",
+                        "Ravana revealed the secret to him",
+                        "He always remembered them clearly"
+                    ],
+                    "correct": 1,
+                    "hint": "Hanuman had forgotten his powers because of a childhood curse."
+                },
+                {
+                    "question": "What did Hanuman give Sita to prove he truly came from Rama?",
+                    "options": [
+                        "A letter written by Rama",
+                        "Rama's signet ring",
+                        "A piece of the broken divine bow",
+                        "A golden flower"
+                    ],
+                    "correct": 1,
+                    "hint": "He dropped it into her lap while she sat beneath a tree."
+                },
+                {
+                    "question": "What did Hanuman do to Lanka before flying back across the sea?",
+                    "options": [
+                        "He said a peaceful goodbye to Ravana",
+                        "He used his burning tail to set much of the golden city ablaze",
+                        "He captured Ravana himself",
+                        "He built a bridge across the ocean"
+                    ],
+                    "correct": 1,
+                    "hint": "The guards had set his tail on fire as a punishment."
+                }
+            ]
+        },
+        {
+            "id": "ramayana-08-building-the-bridge",
+            "title": "The Bridge Built by Many Hands",
+            "series": "Ramayana",
+            "chapter": 8,
+            "chapterTotal": 10,
+            "icon": "🐿️",
+            "level": 3,
+            "readingTime": "20 min",
+            "story": "When Hanuman returned with news of Sita and a burning trail of destruction left behind him in Lanka, Rama felt a fire of his own kindle in his chest — not the fire of rage, but of unshakable purpose. He gathered Sugriva, Hanuman, Jambavan, and the entire vast army of vanaras that had assembled at Kishkindha, and together, they marched south toward the very same shore where Hanuman had made his legendary leap.\nBut standing at the water's edge, staring out at the churning, endless sea, Rama faced a problem that even his courage alone could not solve. An army of thousands, however brave, could not fly across the ocean the way Hanuman had. If they were to reach Lanka and rescue Sita, they would need another way entirely.\nRama, in a moment of frustration rarely seen from someone so calm, addressed the ocean itself, asking respectfully for a path to be granted so his army might cross. When days passed with no response from the great sea, Rama's patience finally wore thin, and he raised his bow, threatening to dry up the entire ocean with a single devastating arrow rather than be ignored any longer.\nAt that, the sea itself seemed to shudder, and Varuna, the god of the ocean, rose from the depths in a swirl of foam and mist, bowing respectfully before Rama.\n'Forgive my silence, noble prince,' Varuna said. 'I cannot simply part my waters, for that is not within my nature. But I can offer you something better — I will hold perfectly still and calm, and lend my strength to any bridge you build across me, so that even the heaviest stone need not sink.'\nRama accepted graciously, lowering his bow, and turned to two especially gifted vanara brothers among his army, Nala and Nila, who had been blessed since childhood with a rare gift — anything they touched with devotion and skill would float upon water rather than sink, a blessing from a sage they had once, as mischievous cubs, accidentally annoyed by throwing his belongings into a river, only to watch in astonishment as everything floated back to him unharmed.\nUnder Nala and Nila's careful direction, the massive vanara army set to work building what would come to be called Rama Setu — Rama's Bridge. Vanaras of every size threw themselves into the effort with astonishing energy. The largest among them hauled enormous boulders down from distant mountains, carrying them on their shoulders as easily as pebbles. Others carved smaller stones and wrote Rama's name upon them with sharpened tools, believing — correctly — that any stone bearing his name would float atop the waves rather than sink beneath them.\nThe construction site buzzed with activity from dawn until deep into the night — vanaras calling instructions to one another, boulders splashing into the sea and, remarkably, bobbing calmly on the surface instead of sinking, ropes of woven vines lashing stone to stone to hold the growing bridge steady against the pull of the waves.\nAmid all this enormous, thunderous effort, a tiny creature appeared at the edge of the construction — a small squirrel, no bigger than a child's hand, watching the great vanaras work with wide, curious eyes. Feeling a fierce desire to help despite her tiny size, the little squirrel ran down to the shoreline, rolled her small body in the wet sand until it was thickly coated, then scurried out onto the half-finished bridge and shook herself vigorously, letting the grains of sand fall into the gaps between the great stones.\nSome of the vanaras, exhausted and focused on their own massive labors, laughed at the tiny creature's efforts, seeing them as useless compared to their own great boulders. 'What good can a few grains of sand possibly do,' one vanara chuckled, 'against a bridge built of mountains?'\nBut Rama, who had been walking along the growing structure inspecting the work, noticed the little squirrel's determined efforts and knelt down beside her, ignoring the vast army watching him do so.\n'Every single grain matters,' Rama said gently, scooping the tired squirrel up into his palm. 'This bridge is not just built of mountains — it is built of every willing hand, however small, that chose to help rather than stand aside. Your effort is no less noble than theirs.'\nWith great tenderness, Rama stroked the squirrel's back with three fingers, and it is said that from that day forward, every squirrel in the world carries three pale stripes along its back — a permanent mark of gratitude from a prince who understood that greatness is built not by size or strength alone, but by the willingness of every heart to give what it can.\nWithin just five days, an achievement that should have taken months, the bridge stretched fully across the sea, connecting the mainland to the shores of Lanka — a shimmering path of stone laid across the water by thousands of hands, both enormous and tiny, all working toward a single, shared purpose.\nAs Rama's vast army began to cross Rama Setu toward Lanka, the vanaras sang songs of the little squirrel who had proven that no contribution, however small, was ever too insignificant to matter.",
+            "moral": "No effort is too small to matter — when everyone contributes whatever they can, even the tiniest hands can help build something extraordinary.",
+            "questions": [
+                {
+                    "question": "Why couldn't Rama's army simply cross the ocean the way Hanuman had?",
+                    "options": [
+                        "The ocean god refused to allow it",
+                        "Thousands of soldiers could not fly across the sea the way one vanara could",
+                        "Rama did not want to rescue Sita anymore",
+                        "The army was too small to matter"
+                    ],
+                    "correct": 1,
+                    "hint": "Hanuman's leap was possible because of his own unique powers alone."
+                },
+                {
+                    "question": "What special gift did Nala and Nila have that helped build the bridge?",
+                    "options": [
+                        "They could breathe underwater",
+                        "Anything they touched with devotion would float instead of sink",
+                        "They could grow as large as mountains",
+                        "They could speak to the ocean directly"
+                    ],
+                    "correct": 1,
+                    "hint": "This gift came from a sage they had once playfully annoyed as young cubs."
+                },
+                {
+                    "question": "How did Rama respond when some vanaras laughed at the tiny squirrel's efforts?",
+                    "options": [
+                        "He agreed that her help was not needed",
+                        "He told her to stop and rest instead",
+                        "He praised her, saying every willing effort matters, no matter how small",
+                        "He ignored her completely"
+                    ],
+                    "correct": 2,
+                    "hint": "Rama gently picked her up and stroked her back with three fingers."
+                }
+            ]
+        },
+        {
+            "id": "ramayana-09-the-great-battle",
+            "title": "The Battle for What Is Right",
+            "series": "Ramayana",
+            "chapter": 9,
+            "chapterTotal": 10,
+            "icon": "⚔️",
+            "level": 3,
+            "readingTime": "20 min",
+            "story": "As Rama's army crossed Rama Setu and arrived on the shores of Lanka, an unexpected visitor approached their camp — Vibhishana, Ravana's own younger brother, a gentle and righteous soul who had spent years pleading with Ravana to release Sita and avoid the disaster he could see approaching. When Ravana furiously banished him from the kingdom for daring to speak such truth, Vibhishana had nowhere else to turn but to Rama himself.\n'I know I ask a strange thing,' Vibhishana said, kneeling before Rama, 'siding against my own brother and my own home. But I cannot support what is wrong simply because it is done by my own blood. If you will have me, I wish to fight for what is right.'\nRama, who had always judged people by their character rather than their birth, welcomed Vibhishana warmly as an ally, even naming him the rightful future king of Lanka once Ravana's cruel reign was ended — a promise that filled Vibhishana's heart with hope even amid the coming sorrow of war.\nInside the golden walls of Lanka, Ravana grew increasingly desperate as Rama's forces surrounded his kingdom. He sent wave after wave of powerful demon warriors and even his own giant, fearsome brother Kumbhakarna, a creature so enormous that it took thunderous drums and trampling elephants merely to wake him from his months-long slumber. Kumbhakarna, though loyal to his brother, secretly disagreed with Ravana's actions and fought only out of duty, ultimately falling to Rama's arrows in a battle both terrible and tragic.\nRavana's own son, Indrajit, proved to be an especially fearsome opponent, a master of magical and hidden warfare who fought from the shadows using illusions and enchanted weapons rather than open combat. In one devastating strike, Indrajit unleashed a magical weapon that struck down Lakshmana, Rama's ever-loyal brother, leaving him gravely wounded and unconscious upon the battlefield.\nRama's heart nearly broke at the sight of his brother lying motionless in his arms — the same brother who had followed him into exile without a single complaint, who had guarded him and Sita through every danger, who had never once put his own comfort above his brother's needs.\nThe army physician examined Lakshmana gravely and delivered urgent news: only a rare healing herb called Sanjeevani, found on a specific Himalayan mountain called Dronagiri, far to the north, could save him — and it needed to be retrieved before sunrise, or all hope would be lost.\nWithout a moment's hesitation, Hanuman rose into the sky, flying faster than he had ever flown before, racing against the setting sun toward the distant mountain. When he arrived, exhausted and searching desperately among countless unfamiliar plants glowing faintly in the moonlight, he realized he could not identify the exact herb needed among so many similar ones.\nRather than waste precious time searching plant by plant, Hanuman made a bold decision. He wrapped his enormous arms around the entire mountain, roots, glowing herbs, and all, tore it free from the earth, and carried the whole mountain back through the sky, arriving just as the first light of dawn began to threaten the horizon. The physician quickly found the Sanjeevani herb among the mountain's glowing plants, and its healing fragrance revived Lakshmana almost instantly, restoring him fully to health and to Rama's overjoyed embrace.\nWith Lakshmana's recovery, the battle raged onward, day after grueling day, until finally, Rama and Ravana themselves stood face to face upon the battlefield — the calm, devoted prince against the powerful, prideful demon king.\nTheir final duel shook the earth itself. Ravana, with his ten heads and twenty arms, hurled every weapon and every trick his vast power could summon, and again and again, Rama's arrows found their mark, only for Ravana's supernatural strength to heal each wound as quickly as it was made. It seemed, for a terrible moment, that Ravana might truly be unstoppable.\nBut Vibhishana, who understood his brother's true nature better than anyone alive, stepped forward and quietly revealed a secret — Ravana's immense power was sustained by a hidden source deep within his own body, a vulnerability that ordinary weapons could never reach.\nWith this knowledge, and calling upon every ounce of devotion, discipline, and righteous purpose he had carried since the day he first drew a bow to protect Vishwamitra's sacred fire so many years before, Rama loosed a final, decisive arrow — one blessed with the power of creation itself, a Brahmastra, gifted to him by the sages who had watched his journey unfold from its very beginning.\nThe arrow struck true, and at last, the great demon king Ravana, whose pride and greed had brought so much suffering upon the world, fell silent upon the battlefield.\nA hush fell over both armies. Then, slowly, cheers of relief and victory rose from Rama's forces, echoing across the shores of Lanka and out over the very bridge that had carried them there. Yet Rama, ever mindful of what truly mattered, did not celebrate wildly like a conqueror. Instead, he ordered that Ravana be given a respectful funeral, for even in defeating a fearsome enemy, Rama believed cruelty should never be repaid with cruelty of its own.\nVibhishana, true to Rama's earlier promise, was crowned the new king of Lanka — a ruler who would guide his people with the same fairness and humility that had first led him to abandon his brother's wrongful path.\nAnd somewhere within the palace grounds, in the very grove where she had waited with unbroken faith for so many long months, Sita finally received the news she had prayed every single day to hear: Rama had come for her, at long last, and the terrible battle was finally, truly over.",
+            "moral": "Standing up for what is right matters more than standing beside those we love when they are wrong, and even victory over evil should be met with dignity, not cruelty.",
+            "questions": [
+                {
+                    "question": "Why did Vibhishana leave his brother Ravana to join Rama's side?",
+                    "options": [
+                        "He wanted to become king of Lanka out of ambition",
+                        "He believed what Ravana was doing was wrong and chose to support what was right",
+                        "Ravana ordered him to help Rama",
+                        "He was afraid of Rama's army"
+                    ],
+                    "correct": 1,
+                    "hint": "He had already tried, and failed, to convince Ravana to release Sita peacefully."
+                },
+                {
+                    "question": "How did Hanuman save the gravely wounded Lakshmana?",
+                    "options": [
+                        "He found a magic potion in Lanka",
+                        "Since he could not identify the exact healing herb, he carried the entire mountain back with him",
+                        "He asked Ravana for help",
+                        "He waited for Lakshmana to heal naturally"
+                    ],
+                    "correct": 1,
+                    "hint": "He ran out of time to search plant by plant in the dark."
+                },
+                {
+                    "question": "How did Rama treat Ravana even after defeating him in battle?",
+                    "options": [
+                        "He celebrated by mocking Ravana's defeat",
+                        "He ordered a respectful funeral, believing cruelty should not be repaid with cruelty",
+                        "He left Ravana's body on the battlefield",
+                        "He destroyed all of Lanka in anger"
+                    ],
+                    "correct": 1,
+                    "hint": "Rama believed in dignity even toward a defeated enemy."
+                }
+            ]
+        },
+        {
+            "id": "ramayana-10-return-to-ayodhya",
+            "title": "Lights of Welcome: The Return to Ayodhya",
+            "series": "Ramayana",
+            "chapter": 10,
+            "chapterTotal": 10,
+            "icon": "🪔",
+            "level": 2,
+            "readingTime": "20 min",
+            "story": "With the battle over and Sita safely returned to his side at last, Rama gathered his loyal companions — Lakshmana, Sugriva, Hanuman, Jambavan, and the many thousands of vanaras who had fought so bravely — and prepared for the long journey home. As a final gift, Vibhishana, now king of Lanka, offered them the use of the magnificent Pushpaka Vimana, a magical flying chariot large enough to carry the entire company through the sky in comfort and speed, a vehicle so wondrous it seemed to sense exactly where its passengers wished to go.\nAs the great chariot rose into the clouds and began its journey north, Rama stood at its edge with Sita beside him, pointing out each place below where their long, difficult journey had unfolded. 'There,' he said, gesturing toward a distant stretch of coastline, 'is where the bridge was built.' 'There,' he continued, pointing to a rugged mountain range, 'is where I first met Hanuman.' Sita listened to each story with quiet wonder, watching the very land of their hardship transform, from this height, into something almost beautiful — proof of how far they had come together.\nFourteen long years had passed since Rama first walked out of Ayodhya's golden gates in simple bark robes, and as the flying chariot approached the familiar borders of his homeland, a strange and worried feeling crept into Rama's heart. Would the kingdom even recognize him after so long? Had Bharata, forced into an impossible position by their mother's actions, grown resentful during all those years of ruling in his brother's name?\nRama needn't have worried. News of Ravana's defeat and Rama's approaching return had already raced ahead of them, carried by messenger birds and joyful rumors passing from village to village faster than any army could march. By the time the Pushpaka Vimana descended toward the outskirts of Ayodhya, the entire kingdom was already in a frenzy of joyful preparation.\nBharata, who had spent fourteen long years living not in the palace itself but in a simple hermit's hut just outside the city walls, wearing the same bark clothing Rama had once worn, refusing every comfort of the throne he governed only out of devoted duty, rushed out to meet the descending chariot the moment he saw it in the sky. When Rama stepped down onto the earth of his homeland for the first time in fourteen years, Bharata fell at his feet, weeping openly, and gently removed the sandals he had placed upon the throne so long ago, sliding them back onto his brother's feet with trembling, grateful hands.\n'The kingdom has been yours all along,' Bharata said, his voice thick with emotion. 'I was only its caretaker, waiting for its true heart to come home.'\nThe two brothers embraced for a long, long moment, fourteen years of separation dissolving into the simple, overwhelming joy of reunion.\nThat night, as word spread that Rama, Sita, and Lakshmana would finally enter the city itself, the people of Ayodhya faced an unexpected problem — Rama's return had been so swift, so joyously sudden, that there had been no time to properly prepare a grand welcome befitting a returning king. But the people of Ayodhya, unwilling to let their beloved prince walk home through darkened streets, found a solution as simple as it was beautiful.\nEvery single household in the kingdom — from the grandest palace chambers to the humblest farming cottages — lit small clay lamps called diyas and placed them along every windowsill, every doorway, every garden path, and every rooftop. As Rama, Sita, and Lakshmana finally walked through the great gates of Ayodhya after fourteen years away, they found the entire city glowing beneath a blanket of stars mirrored perfectly on the ground below — thousands upon thousands of tiny flickering flames lighting their path home, turning the darkest night of the year into something that shone brighter than any festival the kingdom had ever known.\nThe people wept and cheered and threw flower petals as their prince walked among them once more, and it is this very night — this joyful triumph of light returning after a long and difficult darkness — that came to be celebrated for all the centuries afterward as Diwali, the Festival of Lights, a celebration still lit with rows of small clay lamps in homes around the world to this very day.\nSoon after, in a grand coronation ceremony attended by kings and sages from every corner of the land, Rama was finally crowned King of Ayodhya, with Sita seated proudly beside him as his queen, and Lakshmana, Bharata, and Shatrughna standing loyally at his sides, exactly as they always had through every trial the years had brought them.\nUnder Rama's rule, Ayodhya entered an age so peaceful, so fair, and so prosperous that it became known simply as Rama Rajya — the Reign of Rama — a golden standard by which every just and caring ruler afterward would be measured. Fields flourished, the poor were cared for, the wise were heeded, and every person in the kingdom, it was said, felt as though their own king personally cared whether they thrived.\nAnd so the long, remarkable journey came to its joyful close — a journey that had begun with a father's simple wish for children, and grown into a story of broken bows and broken promises, of unshakable loyalty and unbearable loss, of tiny squirrels and towering demons, of a friendship formed between a prince and a monkey warrior that changed the fate of kingdoms. Through every trial, one truth had remained constant, shining as steadily as the lamps that lit Ayodhya's welcome home: that patience, courage, loyalty, and love, held firmly through even the darkest nights, will always, in the end, find their way back to the light.",
+            "moral": "No matter how long or dark the journey, staying true to patience, courage, and love will always lead us back to the light — and that is a joy worth celebrating together.",
+            "questions": [
+                {
+                    "question": "What did Bharata do the moment Rama returned to Ayodhya?",
+                    "options": [
+                        "He refused to give up the throne",
+                        "He removed the sandals from the throne and placed them back on Rama's feet",
+                        "He asked Rama to remain in exile",
+                        "He ran away from the kingdom"
+                    ],
+                    "correct": 1,
+                    "hint": "Bharata had only ever ruled as a caretaker, waiting for this moment."
+                },
+                {
+                    "question": "Why did the people of Ayodhya light thousands of small clay lamps?",
+                    "options": [
+                        "To celebrate the harvest season",
+                        "To light the way home for Rama, Sita, and Lakshmana after fourteen years away",
+                        "Because it was an ordinary nightly tradition",
+                        "To scare away any remaining demons"
+                    ],
+                    "correct": 1,
+                    "hint": "This joyful night became the origin of a festival still celebrated today."
+                },
+                {
+                    "question": "What is the overall lesson of Rama's long journey, from his birth to his return as king?",
+                    "options": [
+                        "Only the strongest warriors deserve happiness",
+                        "Patience, courage, loyalty, and love will always lead us back to the light, even after the darkest struggles",
+                        "It is better to avoid all hardship and stay safely at home",
+                        "Kings should never trust their family members"
+                    ],
+                    "correct": 1,
+                    "hint": "Think about everything Rama held onto through exile, loss, and battle."
+                }
+            ]
+        }
+    ]
+}

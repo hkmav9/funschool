@@ -1802,6 +1802,410 @@ body {
 }
 
 /* ================================================================
+   MYTHOLOGY MODULE
+   ================================================================ */
+
+/* ── Banner ─────────────────────────────────────────────────────── */
+.myth-banner {
+    position: relative;
+    background: linear-gradient(135deg, #B45309, #F59E0B);
+    border-radius: 20px;
+    padding: 22px 20px;
+    margin: 16px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 8px 20px #B4530933;
+}
+
+.myth-banner-sparkles {
+    font-size: 1.1rem;
+    opacity: 0.85;
+    margin-bottom: 6px;
+    letter-spacing: 4px;
+}
+
+.myth-banner-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.myth-banner-sub {
+    font-size: 0.85rem;
+    color: #fff9;
+    font-weight: 600;
+}
+
+/* ── Story List ─────────────────────────────────────────────────── */
+.myth-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 16px 16px;
+}
+
+.myth-series-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #B45309;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 6px 2px 0;
+}
+
+.myth-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--bg-card);
+    border: 2px solid #B4530922;
+    border-radius: 16px;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    position: relative;
+}
+
+.myth-card:active {
+    transform: scale(0.97);
+}
+
+.myth-card-icon {
+    font-size: 2.2rem;
+    flex-shrink: 0;
+}
+
+.myth-card-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.myth-card-chapter {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #B45309;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 2px;
+}
+
+.myth-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 3px;
+}
+
+.myth-card-meta {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+}
+
+.myth-card-stars {
+    display: flex;
+    gap: 3px;
+}
+
+.myth-mini-star {
+    font-size: 1rem;
+    color: var(--bg-secondary);
+}
+
+.myth-mini-star.filled {
+    color: #FFD93D;
+}
+
+.myth-card-badge {
+    font-size: 1.1rem;
+    color: #B45309;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+/* ── Story Reader ───────────────────────────────────────────────── */
+.myth-read {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.myth-back-btn {
+    background: none;
+    border: none;
+    color: #B45309;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 6px 0;
+    align-self: flex-start;
+}
+
+.myth-story-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+}
+
+.myth-story-icon {
+    font-size: 3rem;
+}
+
+.myth-story-chapter {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #B45309;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.myth-story-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin: 0;
+    text-align: center;
+}
+
+.myth-story-body {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 20px;
+    line-height: 1.8;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.myth-story-body p {
+    margin: 0 0 14px 0;
+}
+
+.myth-story-body p:last-child {
+    margin-bottom: 0;
+}
+
+.myth-moral-card {
+    background: linear-gradient(135deg, #B4530918, #F59E0B18);
+    border: 2px dashed #B45309;
+    border-radius: 16px;
+    padding: 16px 18px;
+}
+
+.myth-moral-card-small {
+    text-align: left;
+    width: 100%;
+}
+
+.myth-moral-label {
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: #B45309;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+.myth-moral-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.myth-ready-btn {
+    background: linear-gradient(135deg, #B45309, #F59E0B);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    padding: 16px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.15s ease;
+}
+
+.myth-ready-btn:active {
+    transform: scale(0.97);
+}
+
+/* ── Quiz ───────────────────────────────────────────────────────── */
+.myth-quiz {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.myth-quiz-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.myth-quiz-counter {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.myth-quiz-bar {
+    height: 6px;
+    background: var(--bg-secondary);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.myth-quiz-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #B45309, #F59E0B);
+    border-radius: 3px;
+    transition: width 0.4s ease;
+}
+
+.myth-quiz-question {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.5;
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 18px;
+}
+
+.myth-quiz-hint {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 10px 14px;
+}
+
+.myth-quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.myth-option-btn {
+    background: var(--bg-card);
+    border: 2px solid var(--bg-secondary);
+    border-radius: 14px;
+    padding: 14px 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.12s ease, border-color 0.15s ease;
+    line-height: 1.4;
+}
+
+.myth-option-btn:active:not([disabled]) {
+    transform: scale(0.98);
+}
+
+.myth-option-btn.correct {
+    background: #00b89422;
+    border-color: #00b894;
+    color: #00b894;
+}
+
+.myth-option-btn.wrong {
+    background: #d6336c22;
+    border-color: #d6336c;
+    color: #d6336c;
+}
+
+.myth-option-btn[disabled] {
+    cursor: default;
+}
+
+/* ── Results ────────────────────────────────────────────────────── */
+.myth-results {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+}
+
+.myth-results-icon {
+    font-size: 3.5rem;
+}
+
+.myth-results-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.myth-results-stars {
+    display: flex;
+    gap: 8px;
+}
+
+.myth-result-star {
+    font-size: 2.4rem;
+    color: var(--bg-secondary);
+    transition: color 0.3s ease;
+}
+
+.myth-result-star.filled {
+    color: #FFD93D;
+    text-shadow: 0 0 12px #FFD93D88;
+}
+
+.myth-results-score {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.myth-results-msg {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    max-width: 280px;
+    line-height: 1.5;
+}
+
+.myth-results-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.myth-retry-btn {
+    background: var(--bg-card);
+    border: 2px solid #B45309;
+    border-radius: 14px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #B45309;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.15s ease;
+}
+
+.myth-retry-btn:active {
+    transform: scale(0.97);
+}
+
+.myth-error {
+    text-align: center;
+    padding: 40px 16px;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* ================================================================
    USA STATES MODULE
    ================================================================ */
 

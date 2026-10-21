@@ -131,7 +131,14 @@
     <!-- Service Worker Registration -->
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./sw.js').catch(function () {});
+            var hadController = !!navigator.serviceWorker.controller;
+            navigator.serviceWorker.register('./sw.js').then(function (reg) {
+                reg.update();
+            }).catch(function () {});
+            // When a new version takes over, reload once so the new files show
+            navigator.serviceWorker.addEventListener('controllerchange', function () {
+                if (hadController) location.reload();
+            });
         }
     </script>
 

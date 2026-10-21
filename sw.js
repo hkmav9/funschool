@@ -1,6 +1,6 @@
 /* sw.js - Service Worker for offline support */
 
-var CACHE_NAME = 'funschool-v19';
+var CACHE_NAME = 'funschool-v20';
 var FILES = [
     './',
     './index.html',
@@ -53,17 +53,21 @@ self.addEventListener('activate', function (e) {
 });
 
 self.addEventListener('fetch', function (e) {
+    if (e.request.method !== 'GET') return;
+    // Network-first: always show the latest files when online, fall back to cache offline
     e.respondWith(
-        caches.match(e.request).then(function (cached) {
-            return cached || fetch(e.request).then(function (response) {
-                // Cache new requests dynamically
-                if (response.status === 200) {
-                    var clone = response.clone();
-                    caches.open(CACHE_NAME).then(function (cache) {
-                        cache.put(e.request, clone);
-                    });
-                }
-                return response;
+        fetch(e.request, { cache: 'no-cache' }).then(function (response) {
+            if (response.status === 200) {
+                var clone = response.clone();
+                caches.open(CACHE_NAME).then(function (cache) {
+                    cache.put(e.request, clone);
+                });
+            }
+            return response;
+        }).catch(function () {
+            return caches.match(e.request).then(function (cached) {
+                if (cached) return cached;
+                if (e.request.mode === 'navigate') return caches.match('./index.html');
             });
         }).catch(function () {
             // Fallback to index for navigation requests

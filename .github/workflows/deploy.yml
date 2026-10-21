@@ -1,0 +1,24 @@
+name: Deploy to Firebase
+
+# Deploys whenever main is updated (from Claude mobile, GitHub web/app, or a local push).
+# Can also be run by hand from the GitHub mobile app: Actions → Deploy to Firebase → Run workflow.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Bump service worker cache version
+        run: |
+          CURRENT=$(grep -o 'funschool-v[0-9]*' sw.js | grep -o '[0-9]*$')
+          sed -i "s/funschool-v${CURRENT}/funschool-v$((CURRENT + 1))/" sw.js
+
+      - name: Deploy hosting
+        run: npx --yes firebase-tools@latest deploy --only hosting --project funschool-app --non-interactive
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

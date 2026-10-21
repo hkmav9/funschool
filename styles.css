@@ -4736,3 +4736,80 @@ body {
     .sq-btn { background: var(--bg-card); }
     .word-problem-card { background: rgba(255,107,107,0.06); }
 }
+
+
+/* ---- Continents module ---- */
+.continent-globe {
+    font-size: 4.5rem;
+    text-align: center;
+    margin: 4px 0 12px;
+    animation: continentSpin 6s ease-in-out infinite;
+}
+
+@keyframes continentSpin {
+    0%, 100% { transform: rotate(-8deg); }
+    50% { transform: rotate(8deg); }
+}
+
+.continent-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.continent-btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 18px 8px;
+    min-height: var(--tap-min);
+    background: var(--bg-card);
+    border: 3px solid color-mix(in srgb, var(--c) 35%, transparent);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    font-family: var(--font);
+    color: var(--text);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.continent-btn:last-child {
+    grid-column: 1 / -1;
+}
+
+.continent-btn:active {
+    transform: scale(0.95);
+}
+
+.continent-btn.explored {
+    background: color-mix(in srgb, var(--c) 14%, var(--bg-card));
+    border-color: var(--c);
+}
+
+.continent-btn-icon {
+    font-size: 2.6rem;
+    line-height: 1;
+}
+
+.continent-btn-name {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.continent-btn-check {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--c);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -4928,3 +4928,74 @@ body {
 
 .subject-header-icon { font-size: 1.8rem; }
 .subject-header-name { font-size: 1.3rem; font-weight: 800; }
+
+/* ═══════════════════════════════════════════════════════════════
+   iPAD AIR 11" LANDSCAPE  (≈1180 × 820)
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (orientation: landscape) and (min-width: 1000px) {
+    .screen {
+        max-width: 1120px;
+        padding: calc(24px + var(--safe-top)) calc(48px + var(--safe-right)) calc(24px + var(--safe-bottom)) calc(48px + var(--safe-left));
+    }
+
+    /* Home: three columns of subject tiles / activities */
+    .subject-grid,
+    .module-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+    }
+
+    .subject-tile {
+        min-height: 200px;
+        padding: 26px 16px 20px;
+    }
+
+    .subject-tile-icon { font-size: 3.6rem; }
+    .subject-tile-name { font-size: 1.3rem; }
+    .subject-tile-meta { font-size: 0.9rem; }
+    .subject-tile-stars { font-size: 0.95rem; }
+
+    .subject-header { padding: 14px 18px; margin-bottom: 20px; }
+    .subject-header-name { font-size: 1.5rem; }
+
+    .module-card { padding: 28px 20px; }
+    .module-card-icon { font-size: 3.6rem; }
+    .module-card-title { font-size: 1.2rem; }
+
+    /* Module screens: keep content readable, centred */
+    .module-content {
+        max-width: 960px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .answer-grid {
+        max-width: 760px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Three-column choice grids */
+    .ss-choice-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .sq-answer-grid { grid-template-columns: repeat(2, 1fr); }
+    .states-letter-grid { grid-template-columns: repeat(9, 1fr); }
+    .states-list,
+    .nw-law-list,
+    .mys-list,
+    .ct-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+    .ss-story-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    /* Bottom sheets sit centred rather than full width */
+    .bottom-sheet {
+        left: calc((100vw - 760px) / 2);
+        right: calc((100vw - 760px) / 2);
+    }
+}

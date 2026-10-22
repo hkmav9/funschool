@@ -1,4 +1,4 @@
-/* continents.js - Science Continents module */
+/* continents.js - Geography Continents module */
 
 (function () {
     var MODULE_ID = 'science-continents';
@@ -364,7 +364,7 @@
         title: 'Continents',
         icon: '🌍',
         color: '#55EFC4',
-        category: 'Science',
+        category: 'Geography',
         init: function (el) {
             container = el;
             currentMode = 'explore';

@@ -10,6 +10,18 @@
         'Story Time': '📖 Story Time'
     };
 
+    // Parent-level subject tiles: icon, display name, colour
+    var CATEGORY_META = {
+        'Math':            { icon: '🔢', name: 'Math',            color: '#FF6B6B' },
+        'Science':         { icon: '🔬', name: 'Science',         color: '#00B894' },
+        'Geography':       { icon: '🗺️', name: 'Geography',       color: '#0984E3' },
+        'Thinking':        { icon: '🧠', name: 'Thinking',        color: '#A29BFE' },
+        'Problem-Solving': { icon: '🧩', name: 'Problem-Solving', color: '#E17055' },
+        'Creativity':      { icon: '🎨', name: 'Creativity',      color: '#A855F7' },
+        'Story Time':      { icon: '📖', name: 'Story Time',      color: '#F9A825' }
+    };
+    var homeCategory = null; // null = subject tiles, otherwise the open subject
+
     /* --- Reset dialog (all progress, or one module) --- */
     var resetTarget = null;
 
@@ -186,19 +198,50 @@
     }
 
     /* --- Home Screen --- */
+    function categoryMeta(cat) {
+        return CATEGORY_META[cat] || { icon: '⭐', name: cat, color: '#74B9FF' };
+    }
+
     function renderHome() {
         updateStarDisplay();
         var cardsEl = document.getElementById('moduleCards');
         if (!cardsEl) return;
 
-        var html = '';
-        var categories = getCategories();
+        // If the open subject no longer exists, fall back to the tiles
+        if (homeCategory && getModulesByCategory(homeCategory).length === 0) homeCategory = null;
 
-        categories.forEach(function (cat) {
-            html += '<div class="category-label">' + (CATEGORY_LABELS[cat] || cat) + '</div>';
+        var html = '';
+
+        if (!homeCategory) {
+            // Parent layer: one tile per subject
+            html += '<div class="subject-grid">';
+            getCategories().forEach(function (cat) {
+                var meta = categoryMeta(cat);
+                var mods = getModulesByCategory(cat);
+                var stars = 0;
+                mods.forEach(function (m) {
+                    var p = m.getProgress ? m.getProgress() : { stars: 0 };
+                    stars += p.stars || 0;
+                });
+                html += '<button class="subject-tile" data-category="' + cat + '" style="--sc:' + meta.color + '">';
+                html += '<span class="subject-tile-icon">' + meta.icon + '</span>';
+                html += '<span class="subject-tile-name">' + meta.name + '</span>';
+                html += '<span class="subject-tile-meta">' + mods.length + (mods.length === 1 ? ' activity' : ' activities') + '</span>';
+                html += '<span class="subject-tile-stars">⭐ ' + stars + '</span>';
+                html += '</button>';
+            });
+            html += '</div>';
+        } else {
+            // Subject view: its activities
+            var meta = categoryMeta(homeCategory);
+            html += '<div class="subject-header" style="--sc:' + meta.color + '">';
+            html += '<button class="subject-back" id="subjectBack" aria-label="Back to subjects">&#8592;</button>';
+            html += '<span class="subject-header-icon">' + meta.icon + '</span>';
+            html += '<span class="subject-header-name">' + meta.name + '</span>';
+            html += '</div>';
             html += '<div class="module-grid">';
 
-            getModulesByCategory(cat).forEach(function (mod) {
+            getModulesByCategory(homeCategory).forEach(function (mod) {
                 var progress = mod.getProgress ? mod.getProgress() : { stars: 0 };
                 var starDots = '';
                 for (var i = 0; i < 5; i++) {
@@ -216,9 +259,27 @@
             });
 
             html += '</div>';
-        });
+        }
 
         cardsEl.innerHTML = html;
+        window.scrollTo(0, 0);
+
+        cardsEl.querySelectorAll('.subject-tile').forEach(function (tile) {
+            tile.addEventListener('click', function () {
+                playTapSound();
+                homeCategory = tile.getAttribute('data-category');
+                renderHome();
+            });
+        });
+
+        var back = document.getElementById('subjectBack');
+        if (back) {
+            back.addEventListener('click', function () {
+                playTapSound();
+                homeCategory = null;
+                renderHome();
+            });
+        }
 
         cardsEl.querySelectorAll('.module-card').forEach(function (card) {
             card.addEventListener('click', function () {

@@ -71,6 +71,15 @@
         return shuffle(arr.filter(function (x) { return x !== not; })).slice(0, n);
     }
 
+    // Spoken letter names, so the voice says "ay" for A instead of "uh"
+    var LETTER_NAMES = {
+        A: 'ay', B: 'bee', C: 'see', D: 'dee', E: 'ee', F: 'eff', G: 'jee', H: 'aitch',
+        I: 'eye', J: 'jay', K: 'kay', L: 'el', M: 'em', N: 'en', O: 'oh', P: 'pee',
+        Q: 'cue', R: 'ar', S: 'ess', T: 'tee', U: 'you', V: 'vee', W: 'double you',
+        X: 'ex', Y: 'why', Z: 'zee'
+    };
+    function letterName(l) { return LETTER_NAMES[l.toUpperCase()] || l; }
+
     function speak(text) {
         if (!('speechSynthesis' in window) || !isSoundEnabled()) return;
         try {
@@ -90,7 +99,7 @@
     function qFindLetter() {
         var l = pick(LETTERS);
         return {
-            kind: 'choice', prompt: 'Tap the letter you hear', big: '🔊', bigClass: 'lw-big-tap', say: l,
+            kind: 'choice', prompt: 'Tap the letter you hear', big: '🔊', bigClass: 'lw-big-tap', say: letterName(l),
             options: shuffle([l].concat(others(LETTERS, l, 3))).map(function (x) { return { label: x, value: x }; }),
             answer: l, optClass: 'lw-opt-letter'
         };
@@ -99,7 +108,7 @@
         var l = pick(LETTERS);
         var opts = shuffle([l].concat(others(LETTERS, l, 3)));
         return {
-            kind: 'choice', prompt: 'Find the small letter for', big: l, bigClass: 'lw-big-letter', say: l,
+            kind: 'choice', prompt: 'Find the small letter for', big: l, bigClass: 'lw-big-letter', say: letterName(l),
             options: opts.map(function (x) { return { label: x.toLowerCase(), value: x }; }),
             answer: l, optClass: 'lw-opt-letter'
         };
@@ -117,7 +126,7 @@
         var ans = LETTERS[i + 2];
         return {
             kind: 'choice', prompt: 'What comes next?', big: LETTERS[i] + ' ' + LETTERS[i + 1] + ' _', bigClass: 'lw-big-seq',
-            say: LETTERS[i] + ', ' + LETTERS[i + 1] + ', …',
+            say: letterName(LETTERS[i]) + ', ' + letterName(LETTERS[i + 1]) + ', what comes next?',
             options: shuffle([ans].concat(others(LETTERS, ans, 3))).map(function (x) { return { label: x, value: x }; }),
             answer: ans, optClass: 'lw-opt-letter'
         };
@@ -341,7 +350,7 @@
             btn.addEventListener('click', function () {
                 var l = btn.getAttribute('data-l');
                 var al = ALPHABET[LETTERS.indexOf(l)];
-                speak(l + '. ' + l + ' is for ' + al.w);
+                speak(letterName(l) + ' is for ' + al.w);
                 var d = getData();
                 var list = d.explored[act.id] || [];
                 if (list.indexOf(l) === -1) {
@@ -494,7 +503,7 @@
                     btn.classList.add('used');
                     slots[pos].textContent = t.l;
                     slots[pos].classList.add('filled');
-                    speak(t.l);
+                    speak(letterName(t.l));
                     pos++;
                     if (pos === letters.length) {
                         answered = true;

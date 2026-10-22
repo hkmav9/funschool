@@ -13,6 +13,7 @@
     // Parent-level subject tiles: icon, display name, colour
     var CATEGORY_META = {
         'Math':            { icon: '🔢', name: 'Math',            color: '#FF6B6B' },
+        'Words':           { icon: '🔤', name: 'Words',           color: '#FF9F43' },
         'Science':         { icon: '🔬', name: 'Science',         color: '#00B894' },
         'Geography':       { icon: '🗺️', name: 'Geography',       color: '#0984E3' },
         'Thinking':        { icon: '🧠', name: 'Thinking',        color: '#A29BFE' },

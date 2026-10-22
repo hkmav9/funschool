@@ -4999,3 +4999,118 @@ body {
         right: calc((100vw - 760px) / 2);
     }
 }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   LETTERS & WORDS
+   ═══════════════════════════════════════════════════════════════ */
+.lw-path { display: flex; flex-direction: column; gap: 10px; padding-bottom: 24px; }
+
+.lw-step {
+    display: flex; align-items: center; gap: 12px;
+    width: 100%; padding: 14px; min-height: 72px;
+    background: var(--bg-card); color: var(--text);
+    border: 3px solid var(--bg-secondary); border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm); font-family: var(--font); text-align: left;
+    cursor: pointer; transition: transform 0.15s ease;
+}
+.lw-step:active { transform: scale(0.97); }
+.lw-step.done { border-color: color-mix(in srgb, var(--accent-green) 70%, transparent); }
+.lw-step.next { border-color: #FF9F43; box-shadow: 0 6px 18px rgba(255,159,67,0.3); animation: lwPulse 2s ease-in-out infinite; }
+.lw-step.locked { opacity: 0.45; cursor: default; }
+@keyframes lwPulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.02); } }
+
+.lw-step-num {
+    flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--bg-secondary); font-weight: 800; font-size: 0.95rem;
+}
+.lw-step.done .lw-step-num { background: var(--accent-green); color: #fff; }
+.lw-step.next .lw-step-num { background: #FF9F43; color: #fff; }
+.lw-step-icon { font-size: 2rem; flex-shrink: 0; }
+.lw-step-text { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.lw-step-title { font-weight: 700; font-size: 1.05rem; }
+.lw-step-desc { font-size: 0.85rem; color: var(--text-secondary); }
+.lw-step-stars { font-size: 0.8rem; flex-shrink: 0; }
+
+.lw-act-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.lw-back {
+    border: none; background: var(--bg-secondary); color: var(--text);
+    border-radius: var(--radius-sm); padding: 10px 14px; min-height: 44px;
+    font-family: var(--font); font-weight: 700; font-size: 0.9rem; cursor: pointer;
+}
+.lw-act-title { font-weight: 800; font-size: 1.05rem; }
+
+/* Explore letters */
+.lw-spotlight {
+    min-height: 170px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: var(--bg-secondary); border-radius: var(--radius-lg); margin-bottom: 16px; padding: 12px;
+}
+.lw-spot-letter { font-size: 5rem; font-weight: 800; color: #FF9F43; line-height: 1; animation: correctBounce 0.4s ease; }
+.lw-spot-letter span { font-size: 3.2rem; margin-left: 10px; color: var(--text-secondary); }
+.lw-spot-word { font-size: 1.25rem; font-weight: 600; margin-top: 8px; display: flex; align-items: center; gap: 8px; }
+.lw-spot-emoji { font-size: 2.2rem; }
+.lw-spot-hint { font-size: 1.2rem; font-weight: 700; color: var(--text-secondary); }
+
+.lw-letter-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.lw-letter {
+    aspect-ratio: 1; border: 3px solid var(--bg-secondary); background: var(--bg-card); color: var(--text);
+    border-radius: var(--radius-md); font-size: 2rem; font-weight: 800; font-family: var(--font);
+    box-shadow: var(--shadow-sm); cursor: pointer; transition: transform 0.1s ease;
+}
+.lw-letter:active { transform: scale(0.92); }
+.lw-letter.seen { border-color: color-mix(in srgb, #FF9F43 60%, transparent); background: color-mix(in srgb, #FF9F43 12%, var(--bg-card)); }
+.lw-letter.active { border-color: #FF9F43; background: #FF9F43; color: #fff; }
+
+/* Questions */
+.lw-q { padding-top: 8px; }
+.lw-review {
+    font-size: 0.8rem; font-weight: 700; color: #A29BFE;
+    background: color-mix(in srgb, #A29BFE 15%, transparent);
+    padding: 4px 12px; border-radius: 999px; margin-bottom: 10px;
+}
+.lw-big {
+    border: none; background: none; color: var(--text); font-family: var(--font);
+    cursor: pointer; line-height: 1.1; margin-bottom: 4px;
+}
+.lw-big:disabled { cursor: default; }
+.lw-big-tap { font-size: 4.5rem; animation: lwPulse 1.6s ease-in-out infinite; }
+.lw-big-letter { font-size: 5.5rem; font-weight: 800; color: #FF9F43; }
+.lw-big-emoji { font-size: 5rem; }
+.lw-big-seq { font-size: 3.2rem; font-weight: 800; letter-spacing: 0.15em; color: #FF9F43; }
+.lw-big-word { font-size: 3.6rem; font-weight: 800; color: #FF9F43; letter-spacing: 0.05em; }
+.lw-gapword { font-size: 2.6rem; font-weight: 800; letter-spacing: 0.2em; color: var(--text); margin-top: 6px; }
+.lw-hear { font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 10px; }
+
+.lw-answers.lw-opt-letter .answer-btn { font-size: 2.2rem; }
+.lw-answers.lw-opt-word .answer-btn { font-size: 1.6rem; }
+.lw-answers.lw-five { grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.lw-answers.lw-five .answer-btn { height: 64px; font-size: 1.9rem; }
+.lw-answers.lw-three { grid-template-columns: repeat(3, 1fr); }
+.lw-answers.lw-opt-pic .answer-btn { height: 96px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
+.lw-opt-emoji { font-size: 2.6rem; line-height: 1; }
+.lw-opt-sub { font-size: 0.95rem; font-weight: 700; }
+
+/* Build a word */
+.lw-slots { display: flex; gap: 10px; justify-content: center; margin: 12px 0 20px; }
+.lw-slot {
+    width: 64px; height: 72px; border-radius: var(--radius-md);
+    border: 3px dashed var(--text-light); display: flex; align-items: center; justify-content: center;
+    font-size: 2.4rem; font-weight: 800; color: #FF9F43;
+}
+.lw-slot.filled { border-style: solid; border-color: #FF9F43; background: color-mix(in srgb, #FF9F43 12%, var(--bg-card)); animation: correctBounce 0.35s ease; }
+.lw-tiles { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.lw-tile {
+    width: 70px; height: 70px; border-radius: var(--radius-md); border: none;
+    background: #FF9F43; color: #fff; font-size: 2.2rem; font-weight: 800; font-family: var(--font);
+    box-shadow: 0 5px 0 color-mix(in srgb, #FF9F43 70%, #000); cursor: pointer; transition: transform 0.1s ease;
+}
+.lw-tile:active { transform: translateY(3px); }
+.lw-tile.used { visibility: hidden; }
+.lw-tile.wrong { animation: gentleShake 0.4s ease; }
+
+/* Round complete */
+.lw-round-stars { font-size: 2rem; margin: 4px 0 8px; }
+.lw-dim { opacity: 0.2; }
+.lw-done-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.lw-next-btn { background: #FF9F43 !important; }

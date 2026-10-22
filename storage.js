@@ -94,6 +94,15 @@ function updateSettings(updates) {
     return data.settings;
 }
 
+function resetModuleProgress(moduleId) {
+    const data = loadData();
+    const moduleStars = (data.modules[moduleId] && data.modules[moduleId].stars) || 0;
+    data.totalStars = Math.max(0, (data.totalStars || 0) - moduleStars);
+    const defaults = getDefaultData().modules[moduleId];
+    data.modules[moduleId] = defaults ? JSON.parse(JSON.stringify(defaults)) : {};
+    saveData(data);
+}
+
 function resetAllProgress() {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(getDefaultData()));
 }

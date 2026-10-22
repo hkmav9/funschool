@@ -10,6 +10,27 @@
         'Story Time': '📖 Story Time'
     };
 
+    /* --- Reset dialog (all progress, or one module) --- */
+    var resetTarget = null;
+
+    function openResetDialog(moduleId) {
+        resetTarget = moduleId || null;
+        var titleEl = document.querySelector('#confirmDialog .confirm-title');
+        var textEl = document.querySelector('#confirmDialog .confirm-text');
+        var mod = resetTarget ? getModule(resetTarget) : null;
+        if (mod) {
+            titleEl.textContent = 'Reset ' + mod.icon + ' ' + mod.title + '?';
+            textEl.textContent = 'Type the 4-digit passcode to erase stars and progress for this module only.';
+        } else {
+            titleEl.textContent = 'Enter Passcode to Reset';
+            textEl.textContent = 'Type the 4-digit passcode to erase all stars and progress.';
+        }
+        document.querySelectorAll('#passcodeDots .passcode-dot').forEach(function (d) { d.classList.remove('filled'); });
+        var err = document.getElementById('passcodeError');
+        if (err) err.classList.remove('visible');
+        document.getElementById('confirmDialog').classList.add('active');
+    }
+
     /* --- Screen Navigation --- */
     var isFirstLoad = true;
 
@@ -224,11 +245,21 @@
             getAllModules().forEach(function (mod) {
                 var p = mod.getProgress ? mod.getProgress() : { stars: 0 };
                 html += '<div class="progress-card">';
+                html += '<div class="progress-card-info">';
                 html += '<div class="progress-card-title">' + mod.icon + ' ' + mod.title + '</div>';
                 html += '<div class="progress-card-detail">' + (p.stars || 0) + ' stars' + (p.detail ? ' • ' + p.detail : '') + '</div>';
                 html += '</div>';
+                html += '<button class="module-reset-btn" data-reset="' + mod.id + '" aria-label="Reset ' + mod.title + '">↺ Reset</button>';
+                html += '</div>';
             });
             progressEl.innerHTML = html;
+
+            progressEl.querySelectorAll('.module-reset-btn').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    playTapSound();
+                    openResetDialog(btn.getAttribute('data-reset'));
+                });
+            });
         }
     }
 
@@ -308,6 +339,15 @@
         }
 
         function executeReset() {
+            if (resetTarget) {
+                resetModuleProgress(resetTarget);
+                resetTarget = null;
+                closePasscodeDialog();
+                renderSettings();
+                updateStarDisplay();
+                showConfetti();
+                return;
+            }
             resetAllProgress();
             localStorage.removeItem(AVATAR_KEY);
             closePasscodeDialog();
@@ -365,11 +405,11 @@
         }
 
         document.getElementById('resetBtn').addEventListener('click', function () {
-            resetPasscodeUI();
-            document.getElementById('confirmDialog').classList.add('active');
+            openResetDialog(null);
         });
 
         document.getElementById('confirmCancel').addEventListener('click', function () {
+            resetTarget = null;
             closePasscodeDialog();
         });
 
